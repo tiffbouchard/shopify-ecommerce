@@ -1,65 +1,78 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Nav from "../components/nav";
 
-export default function Home() {
+import Container from "react-bootstrap/Container";
+import Image from "react-bootstrap/Image";
+import { Row, Col } from "react-bootstrap";
+
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>OJOS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+      <Nav />
+      <Container fluid>
+        <Row>
+          <Col xs={12} sm={12} md={5}>
+            <a href="">
+              <div className="landing-image-one">
+                <Image
+                  fluid
+                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/IMG_6049_1200x.jpg?v=1596433120"
+                />
+                <a href="/products/:id" className="image-description">
+                  Some text
+                </a>
+              </div>
+            </a>
+          </Col>
+          <Col xs={12} sm={12} md={7}>
+            <a href="">
+              <div className="landing-image-two">
+                <Image
+                  fluid
+                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/KKCO-9_1200x.jpg?v=1595571332"
+                />
+                <a href="/products/:id" className="image-description">
+                  Some text
+                </a>
+              </div>
+            </a>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} sm={12} md={6}>
+            <a href="">
+              <div className="landing-image-three">
+                <Image
+                  fluid
+                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/BREDA-KkCo_Postcard_FINAL-01_f0e05425-7a84-4760-ab29-6765ebfca32e_1200x.jpg?v=1596214451"
+                />
+                <a href="/products/:id" className="image-description">
+                  Some text
+                </a>
+              </div>
+            </a>
+          </Col>
+          <Col xs={12} sm={12} md={6}>
+            <a href="">
+              <div className="landing-image-four">
+                <Image
+                  fluid
+                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/C1_0625_1200x.jpg?v=1592541154"
+                />
+                <a href="/products/:id" className="image-description">
+                  Some text
+                </a>
+              </div>
+            </a>
+          </Col>
+        </Row>
+      </Container>
     </div>
-  )
-}
+  );
+};
+
+export default Home;

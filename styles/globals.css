@@ -1,16 +1,78 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Shadows+Into+Light&display=swap');
 
 * {
-  box-sizing: border-box;
+  font-family: 'Gaegu', 'Shadows Into Light', cursive;
 }
+main {
+  min-height: 100vh;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+.page-title {
+  text-align: center;
+  margin-top: 90px;
+  margin-bottom: 40px;
+}
+.products {
+  margin-bottom: 0px;
+}
+.products:hover {
+  transition: 1s;
+  opacity: .5;
+  cursor: pointer;
+}
+.product-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+.product-name, .product-price, .product-name:hover, .product-price:hover {
+  font-size: 15px;
+  margin: 0px;
+  color: black;
+}
+.landing-image-one {
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.landing-image-two {
+  margin-top: 250px;
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.landing-image-three {
+  margin-top: 50px;
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.landing-image-four {
+  max-width: auto;
+  margin-top: 275px;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.image-description, .image-description:hover {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 25px;
+  color: black;
+}
+.product-section {
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+
