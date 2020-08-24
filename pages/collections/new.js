@@ -21,7 +21,7 @@ const New = () => {
                 <Image
                   className="products"
                   fluid
-                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/products/lime_Tank_front_adel_720x.jpg?v=1595566753"
+                  src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202731F048010_1/ys-red-clasp-pochette-shoulder-bag.jpg"
                 />
               </a>
             </div>
@@ -36,54 +36,78 @@ const New = () => {
           </Col>
           <Col xs={12} sm={6} md={6} lg={4}>
             <div className="product-section">
-              <Image
-                className="products"
-                fluid
-                src="https://cdn.shopify.com/s/files/1/0021/9919/1618/products/lime_Tank_front_adel_720x.jpg?v=1595566753"
-              />
+              <a href="/products/:id">
+                <Image
+                  className="products"
+                  fluid
+                  src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202283F047080_1/31-phillip-lim-green-mini-pashli-bag.jpg"
+                />
+              </a>
             </div>
             <div className="product-description">
-              <p className="product-name">Product Name</p>
-              <p className="product-price">$15.00</p>
+              <a href="/products/:id" className="product-name">
+                Product Name
+              </a>
+              <a href="/products/:id" className="product-price">
+                $15.00
+              </a>
             </div>
           </Col>
           <Col xs={12} sm={6} md={6} lg={4}>
             <div className="product-section">
-              <Image
-                className="products"
-                fluid
-                src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/aaScreen-Shot-2020-06-01-at-10.31.25-AM_1200x.jpg?v=1591126951"
-              />
+              <a href="/products/:id">
+                <Image
+                  className="products"
+                  fluid
+                  src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202153F048003_1/martine-ali-silver-bijoux-bag.jpg"
+                />
+              </a>
             </div>
             <div className="product-description">
-              <p className="product-name">Product Name</p>
-              <p className="product-price">$15.00</p>
+              <a href="/products/:id" className="product-name">
+                Product Name
+              </a>
+              <a href="/products/:id" className="product-price">
+                $15.00
+              </a>
             </div>
           </Col>
           <Col xs={12} sm={6} md={6} lg={4}>
             <div className="product-section">
-              <Image
-                className="products"
-                fluid
-                src="https://www.gamudacove.com.my/media/img/default-img.jpg"
-              />
+              <a href="/products/:id">
+                <Image
+                  className="products"
+                  fluid
+                  src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202230F045005_1/comme-des-garcons-wallets-red-large-huge-logo-pouch.jpg"
+                />
+              </a>
             </div>
             <div className="product-description">
-              <p className="product-name">Product Name</p>
-              <p className="product-price">$15.00</p>
+              <a href="/products/:id" className="product-name">
+                Product Name
+              </a>
+              <a href="/products/:id" className="product-price">
+                $15.00
+              </a>
             </div>
           </Col>
           <Col xs={12} sm={6} md={6} lg={4}>
             <div className="product-section">
-              <Image
-                className="products"
-                fluid
-                src="https://www.gamudacove.com.my/media/img/default-img.jpg"
-              />
+              <a href="/products/:id">
+                <Image
+                  className="products"
+                  fluid
+                  src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202730F045012_1/bao-bao-issey-miyake-white-lucent-pouch.jpg"
+                />
+              </a>
             </div>
             <div className="product-description">
-              <p className="product-name">Product Name</p>
-              <p className="product-price">$15.00</p>
+              <a href="/products/:id" className="product-name">
+                Product Name
+              </a>
+              <a href="/products/:id" className="product-price">
+                $15.00
+              </a>
             </div>
           </Col>
         </Row>

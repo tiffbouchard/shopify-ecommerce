@@ -8,11 +8,22 @@ main {
   margin-top: 63px;
   margin-bottom: 30px;
 }
+/* Titles for every page */
 .page-title {
   text-align: center;
   margin-top: 90px;
   margin-bottom: 40px;
 }
+/* Products Pages */
+.product-section {
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ^^ make a square container that scales but stays a square and images fill to cover that square */
 .products {
   margin-bottom: 0px;
 }
@@ -33,6 +44,7 @@ main {
   margin: 0px;
   color: black;
 }
+/* Landing Page */
 .landing-image-one {
   max-width: auto;
   height: auto;
@@ -69,12 +81,7 @@ main {
   font-size: 25px;
   color: black;
 }
-.product-section {
-  max-width: auto;
-  height: auto;
-  object-fit: cover;
-  overflow: hidden;
-}
+/* Instagram Feed */
 .instagram-feed {
   display: flex;
 }
@@ -83,11 +90,14 @@ main {
   height: auto;
 }
 .instagram-feed a > img:hover {
+  transition: 0.5s;
   opacity: 0.8;
 }
 .follow-header {
   text-align: center;
+  margin-top: 30px;
 }
+/* About */
 .about-image-one {
   max-width: auto;
   height: auto;
@@ -101,9 +111,14 @@ main {
   overflow: hidden;
 }
 .about-paragraph {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
   text-align: center;
-  margin: 50px;
 }
+/* Contact Form */
 .contact-des {
   text-align: center;
   margin: -30px 60px 20px 60px;
@@ -114,7 +129,76 @@ main {
   align-items: center;
   justify-content: center;
 }
-input, textarea  {
+.contact-form-input {
   width: 500px;
+  padding: 10px;
+  margin: 10px;
+}
+.contact-form-input-button {
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(191, 243, 191);
+}
+.contact-form-input-button:hover {
+  background-color: rgb(179, 230, 179);
+}
+/* Shop Policy */
+.policy-body {
+  text-align: center;
+  margin: -10px 80px 20px 80px;
+}
+/* Nav Bar Dropdown */
+a.dropdown-toggle::after {
+  content: none;
+}
+/* Shopping Cart */
+.cart-delete-btn {
+  border: none;
+  background-color: transparent;
+  color: red;
+} 
+.cart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 50px 0 50px;
+}
+.cart-checkout-btn {
+  border: none;
+  padding: 15px;
+}
+.cart-mobile {
+  visibility: hidden;
+}
+.cart-checkout-btn-mobile {
+  display: none;
+}
+@media only screen and (min-width: 200px) and (max-width: 700px) {
+  .cart-table {
+    display: none;
+  }
+  .cart-mobile {
+    visibility: visible;  
+  }
+  .cart-checkout-btn-mobile {
+    border: none;
+    padding: 15px;
+    display: inline;
+    margin: 20px;
+  }
+  .cart-image {
+    max-width: 150px;
+  }
+}
+/* Subscribe Modal */
+.modal-content {
+  border: none !important; 
+  text-align: center;
+}
+.subscribe-form {
+  display: flex;
+  justify-content: center;
   padding: 10px;
 }

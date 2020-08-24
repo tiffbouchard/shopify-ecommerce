@@ -8,12 +8,17 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
+import SubscribeModal from "./modal-subscribe";
+
 const Footer = () => {
+  const [modalShow, setModalShow] = React.useState(false);
   return (
-    <Navbar bg="white" fixed="sticky" expand="md">
+    <Navbar className="footer" bg="white" fixed="sticky" expand="md">
       <Nav className="mr-auto">
         <Nav.Link href="/contact">Contact</Nav.Link>
         <Nav.Link href="/policy">Store Policy</Nav.Link>
+        <Nav.Link onClick={() => setModalShow(true)}>Subscribe</Nav.Link>
+        <SubscribeModal show={modalShow} onHide={() => setModalShow(false)} />
       </Nav>
       <Nav>
         <Nav.Link href="http://tiffbouchard.com">

@@ -1,12 +1,21 @@
+import { useEffect, useState } from "react";
+
 import Head from "next/head";
 
 import Instagram from "../components/instagram";
+import SubscribeModal from "../components/modal-subscribe";
 
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import { Row, Col } from "react-bootstrap";
 
 const Home = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  useEffect(() => {
+    setModalShow(true);
+  }, []);
+
   return (
     <div>
       <Head>

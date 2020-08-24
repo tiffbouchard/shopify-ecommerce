@@ -11,33 +11,26 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const Navigation = () => {
-  const [navBackground, setNavBackground] = useState(false);
+  // const [navBackground, setNavBackground] = useState(false);
 
-  const navRef = useRef();
-  navRef.current = navBackground;
+  // const navRef = useRef();
+  // navRef.current = navBackground;
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const show = window.scrollY > 50;
-      if (navRef.current !== show) {
-        setNavBackground(show);
-      }
-    };
-    document.addEventListener("scroll", handleScroll);
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const show = window.scrollY > 50;
+  //     if (navRef.current !== show) {
+  //       setNavBackground(show);
+  //     }
+  //   };
+  //   document.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
-    <Navbar
-      style={{
-        transition: "1s ease",
-        backgroundColor: navBackground ? "white" : "transparent",
-      }}
-      fixed="top"
-      expand="md"
-    >
+    <Navbar bg="white" fixed="top" expand="md">
       <Navbar.Brand
         style={{
           fontSize: "25px",

@@ -5,20 +5,14 @@ function Instagram() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [images, setImages] = useState([]);
 
-  // Note: the empty deps array [] means
-  // this useEffect will run once
-  // similar to componentDidMount()
   useEffect(() => {
-    fetch("https://www.instagram.com/tiffbouchard/?__a=1")
+    fetch("https://www.instagram.com/unikaswim/?__a=1")
       .then((res) => res.json())
       .then(
         (result) => {
           setIsLoaded(true);
           setImages(result.graphql.user.edge_owner_to_timeline_media.edges);
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           setIsLoaded(true);
           setError(error);

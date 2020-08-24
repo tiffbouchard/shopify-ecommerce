@@ -13,10 +13,17 @@ const Contact = () => {
         form. We will get back to you as soon as possible. Have a lovely day.
       </p>
       <form className="contact-form">
-        <input type="text" placeholder="Name" />
-        <input type="text" placeholder="Email" />
-        <textarea rows="10" type="text" placeholder="Message" />
-        <button type="submit">Send</button>
+        <input type="text" placeholder="Name" className="contact-form-input" />
+        <input type="text" placeholder="Email" className="contact-form-input" />
+        <textarea
+          rows="6"
+          type="text"
+          placeholder="Message"
+          className="contact-form-input"
+        />
+        <button type="submit" className="contact-form-input-button">
+          Send
+        </button>
       </form>
     </div>
   );
