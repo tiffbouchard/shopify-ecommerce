@@ -1,5 +1,6 @@
 import Head from "next/head";
-import Nav from "../components/nav";
+
+import Instagram from "../components/instagram";
 
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
@@ -12,7 +13,6 @@ const Home = () => {
         <title>OJOS</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
       <Container fluid>
         <Row>
           <Col xs={12} sm={12} md={5}>
@@ -71,6 +71,8 @@ const Home = () => {
           </Col>
         </Row>
       </Container>
+      <h4 className="follow-header">FOLLOW OJOS ON INSTAGRAM</h4>
+      <Instagram />
     </div>
   );
 };

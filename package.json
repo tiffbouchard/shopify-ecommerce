@@ -5,13 +5,26 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",
     "next": "^9.5.2",
     "react": "^16.13.1",
     "react-bootstrap": "^1.3.0",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-instafeed": "^1.0.0",
+    "react-instagram-authless-feed": "github:jamesmoriarty/react-instagram-authless-feed"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-actions": "^6.0.16",
+    "@storybook/addon-essentials": "^6.0.16",
+    "@storybook/addon-links": "^6.0.16",
+    "@storybook/react": "^6.0.16",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
   }
 }

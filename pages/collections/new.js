@@ -21,7 +21,7 @@ const New = () => {
                 <Image
                   className="products"
                   fluid
-                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/products/FRONT_LEMONPEPPERCHECK.jpg?v=1597985531"
+                  src="https://cdn.shopify.com/s/files/1/0021/9919/1618/products/lime_Tank_front_adel_720x.jpg?v=1595566753"
                 />
               </a>
             </div>

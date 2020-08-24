@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Shadows+Into+Light&display=swap');
 
 * {
-  font-family: 'Gaegu', 'Shadows Into Light', cursive;
+  font-family: 'Gaegu', 'Shadows Into Light', serif;
 }
 main {
   min-height: 100vh;
-  margin-top: 55px;
+  margin-top: 63px;
   margin-bottom: 30px;
 }
 .page-title {
@@ -75,4 +75,46 @@ main {
   object-fit: cover;
   overflow: hidden;
 }
-
+.instagram-feed {
+  display: flex;
+}
+.instagram-feed a > img {
+  width: 100%;
+  height: auto;
+}
+.instagram-feed a > img:hover {
+  opacity: 0.8;
+}
+.follow-header {
+  text-align: center;
+}
+.about-image-one {
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.about-image-two {
+  max-width: auto;
+  height: auto;
+  object-fit: cover;
+  overflow: hidden;
+}
+.about-paragraph {
+  text-align: center;
+  margin: 50px;
+}
+.contact-des {
+  text-align: center;
+  margin: -30px 60px 20px 60px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+input, textarea  {
+  width: 500px;
+  padding: 10px;
+}

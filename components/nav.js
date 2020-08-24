@@ -15,6 +15,7 @@ const Navigation = () => {
 
   const navRef = useRef();
   navRef.current = navBackground;
+
   useEffect(() => {
     const handleScroll = () => {
       const show = window.scrollY > 50;

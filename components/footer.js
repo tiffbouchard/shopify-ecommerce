@@ -14,6 +14,8 @@ const Footer = () => {
       <Nav className="mr-auto">
         <Nav.Link href="/contact">Contact</Nav.Link>
         <Nav.Link href="/policy">Store Policy</Nav.Link>
+      </Nav>
+      <Nav>
         <Nav.Link href="http://tiffbouchard.com">
           ©2020 OJOS - Built by T
         </Nav.Link>
