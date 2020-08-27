@@ -1,8 +1,10 @@
 import Head from "next/head";
+import client from "../../client";
 
 import Image from "react-bootstrap/Image";
 
-const ProductDetails = () => {
+const ProductDetails = (props) => {
+  const { title, price, size, description } = props;
   return (
     <div id="product-details-page">
       <Head>
@@ -20,7 +22,7 @@ const ProductDetails = () => {
           </a>
         </div>
         <div id="product-details">
-          <h1>Jenny Tote</h1>
+          <h1>{title}</h1>
           <p>$15.00</p>
           <select name="cars" id="cars">
             <option value="volvo">XS</option>
@@ -43,5 +45,17 @@ const ProductDetails = () => {
     </div>
   );
 };
+
+ProductDetails.getInitialProps = async function (context) {
+  const { slug = " " } = context.query;
+  return await client.fetch(
+    `
+    *[_type == "product" && slug.current == $slug][0]{title, price, size, description}
+  `,
+    { slug }
+  );
+};
+
+// *[_type == "product"]{title, "categories": categories[]->title, "defaultProductVariant": images[], price, size }
 
 export default ProductDetails;

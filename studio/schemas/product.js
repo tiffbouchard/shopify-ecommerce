@@ -1,85 +1,102 @@
 export default {
-  name: 'product',
-  title: 'Product',
-  type: 'document',
+  name: "product",
+  title: "Product",
+  type: "document",
   fields: [
     {
-      name: 'title',
-      title: 'Title',
-      type: 'string'
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: 'slug',
-      title: 'Slug',
-      type: 'slug',
+      name: "slug",
+      title: "Slug",
+      type: "slug",
       options: {
-        source: 'title',
-        maxLength: 96
-      }
+        source: "title",
+        maxLength: 96,
+      },
     },
     {
-      title: 'Default variant',
-      name: 'defaultProductVariant',
-      type: 'productVariant'
+      name: "size",
+      title: "Size",
+      type: "string",
     },
     {
-      title: 'Variants',
-      name: 'variants',
-      type: 'array',
+      name: "price",
+      title: "Price",
+      type: "number",
+    },
+    {
+      name: "images",
+      title: "Images",
+      type: "array",
       of: [
         {
-          title: 'Variant',
-          type: 'productVariant'
-        }
-      ]
-    },
-    {
-      title: 'Tags',
-      name: 'tags',
-      type: 'array',
-      of: [
-        {
-          type: 'string'
-        }
+          type: "image",
+          options: {
+            hotspot: true,
+          },
+        },
       ],
-      options: {
-        layout: 'tags'
-      }
     },
+    // {
+    //   title: 'Default variant',
+    //   name: 'defaultProductVariant',
+    //   type: 'productVariant'
+    // },
+    // {
+    //   title: 'Variants',
+    //   name: 'variants',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       title: 'Variant',
+    //       type: 'productVariant'
+    //     }
+    //   ]
+    // },
+    // {
+    //   title: 'Tags',
+    //   name: 'tags',
+    //   type: 'array',
+    //   of: [
+    //     {
+    //       type: 'string'
+    //     }
+    //   ],
+    //   options: {
+    //     layout: 'tags'
+    //   }
+    // },
+    // {
+    //   name: 'blurb',
+    //   title: 'Blurb',
+    //   type: 'localeString'
+    // },
     {
-      name: 'vendor',
-      title: 'Vendor',
-      type: 'reference',
-      to: {type: 'vendor'}
-    },
-    {
-      name: 'blurb',
-      title: 'Blurb',
-      type: 'localeString'
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
+      name: "categories",
+      title: "Categories",
+      type: "array",
       of: [
         {
-          type: 'reference',
-          to: {type: 'category'}
-        }
-      ]
+          type: "reference",
+          to: { type: "category" },
+        },
+      ],
     },
     {
-      name: 'body',
-      title: 'Body',
-      type: 'localeBlockContent'
-    }
+      name: "description",
+      title: "Description",
+      type: "text",
+    },
   ],
 
   preview: {
     select: {
-      title: 'title',
-      manufactor: 'manufactor.title',
-      media: 'defaultProductVariant.images[0]'
-    }
-  }
-}
+      title: "title",
+      manufactor: "manufactor.title",
+      media: "defaultProductVariant.images[0]",
+    },
+  },
+};

@@ -9,9 +9,9 @@ export default {
       type: 'string'
     },
     {
-      title: 'Weight in grams',
-      name: 'grams',
-      type: 'number'
+      title: 'Size',
+      name: 'size',
+      type: 'string'
     },
     {
       title: 'Price',
