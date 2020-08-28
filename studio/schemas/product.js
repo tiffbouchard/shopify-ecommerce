@@ -18,9 +18,15 @@ export default {
       },
     },
     {
-      name: "size",
-      title: "Size",
-      type: "string",
+      name: "sizes",
+      title: "Sizes",
+      type: "array",
+      of: [
+        {
+          title: "size",
+          type: "string",
+        },
+      ],
     },
     {
       name: "price",
@@ -41,15 +47,15 @@ export default {
     //   type: 'productVariant'
     // },
     // {
-    //   title: 'Variants',
-    //   name: 'variants',
-    //   type: 'array',
+    //   title: "Variants",
+    //   name: "variants",
+    //   type: "array",
     //   of: [
     //     {
-    //       title: 'Variant',
-    //       type: 'productVariant'
-    //     }
-    //   ]
+    //       title: "Variant",
+    //       type: "productVariant",
+    //     },
+    //   ],
     // },
     // {
     //   title: 'Tags',
@@ -70,15 +76,10 @@ export default {
     //   type: 'localeString'
     // },
     {
-      name: "categories",
-      title: "Categories",
-      type: "array",
-      of: [
-        {
-          type: "reference",
-          to: { type: "category" },
-        },
-      ],
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: { type: "category" },
     },
     {
       name: "description",

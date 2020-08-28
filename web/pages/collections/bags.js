@@ -57,7 +57,7 @@ const Bags = (props) => {
 
 Bags.getInitialProps = async () => ({
   products: await client.fetch(`
-    *[_type == "product" && categories[0]->title == "Bags"]|order(_createdAt desc){title, price, slug, image}
+    *[_type == "product" && category->title == "Bags"]|order(_createdAt desc){title, price, slug, image}
   `),
 });
 

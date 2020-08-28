@@ -58,7 +58,7 @@ const Jewelry = (props) => {
 // Fetching data from Sanity.io with GROQ query
 Jewelry.getInitialProps = async () => ({
   products: await client.fetch(`
-    *[_type == "product" && categories[0]->title == "Jewelry"]|order(_createdAt desc){title, price, slug, image}
+    *[_type == "product" && category->title == "Jewelry"]|order(_createdAt desc){title, price, slug, image}
   `),
 });
 
