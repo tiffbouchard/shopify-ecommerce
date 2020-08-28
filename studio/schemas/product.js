@@ -28,17 +28,12 @@ export default {
       type: "number",
     },
     {
-      name: "images",
-      title: "Images",
-      type: "array",
-      of: [
-        {
-          type: "image",
-          options: {
-            hotspot: true,
-          },
-        },
-      ],
+      name: "image",
+      title: "Image",
+      type: "image",
+      options: {
+        hotspot: true,
+      },
     },
     // {
     //   title: 'Default variant',

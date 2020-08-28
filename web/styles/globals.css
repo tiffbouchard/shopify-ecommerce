@@ -46,12 +46,14 @@ main {
 }
 /* Landing Page */
 .landing-image-one {
+  cursor: pointer;
   max-width: auto;
   height: auto;
   object-fit: cover;
   overflow: hidden;
 }
 .landing-image-two {
+  cursor: pointer;
   margin-top: 250px;
   max-width: auto;
   height: auto;
@@ -59,6 +61,7 @@ main {
   overflow: hidden;
 }
 .landing-image-three {
+  cursor: pointer;
   margin-top: 50px;
   max-width: auto;
   height: auto;
@@ -66,6 +69,7 @@ main {
   overflow: hidden;
 }
 .landing-image-four {
+  cursor: pointer;
   max-width: auto;
   margin-top: 275px;
   height: auto;
@@ -73,6 +77,7 @@ main {
   overflow: hidden;
 }
 .image-description, .image-description:hover {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,12 +225,18 @@ a.dropdown-toggle::after {
   margin: 0 50px;
 }
 #product-details-page {
-  height: 100vh;
+  /* height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+#product-details-container {
+  /* width: 40%;
+  display: flex; */
+}
+.no-products-msg {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#product-details-container {
-  width: 40%;
-  display: flex;
 }

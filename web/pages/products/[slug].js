@@ -1,38 +1,36 @@
 import Head from "next/head";
-import client from "../../client";
 
+// Sanity.io
+import client from "../../client";
+import urlFor from "../../imageUrlBuilder";
+
+// Bootstrap
 import Image from "react-bootstrap/Image";
 
 const ProductDetails = (props) => {
-  const { title, price, size, description } = props;
+  const { title, price, size, description, image } = props;
+
   return (
     <div id="product-details-page">
       <Head>
-        <title>OJOS | </title>
+        <title>OJOS | {title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div id="product-details-container">
         <div id="product-image">
-          <a href="/products/:id">
-            <Image
-              className="products"
-              fluid
-              src="https://img.ssensemedia.com/images/b_white,c_lpad,g_south,h_1086,w_724/c_scale,h_480/f_auto,dpr_1.0/202283F047080_1/31-phillip-lim-green-mini-pashli-bag.jpg"
-            />
-          </a>
+          <Image
+            className="products"
+            fluid
+            src={urlFor(image).quality(100).url()}
+          />
         </div>
         <div id="product-details">
           <h1>{title}</h1>
-          <p>$15.00</p>
-          <select name="cars" id="cars">
-            <option value="volvo">XS</option>
-            <option value="saab">S</option>
-            <option value="mercedes">M</option>
-            <option value="audi">L</option>
-          </select>
+          <p>${price}</p>
+          <p>{size}</p>
           <button>Add to Cart</button>
           <h4>Description</h4>
-          <p>A beautiful handbag made from leather with gold detailing</p>
+          <p>{description}</p>
           <h4>Shipping</h4>
           <p>
             Complimentary ground shipping on all domestic orders. Returns
@@ -46,16 +44,15 @@ const ProductDetails = (props) => {
   );
 };
 
+// Fetching data from Sanity.io with GROQ query
 ProductDetails.getInitialProps = async function (context) {
   const { slug = " " } = context.query;
   return await client.fetch(
     `
-    *[_type == "product" && slug.current == $slug][0]{title, price, size, description}
+    *[_type == "product" && slug.current == $slug][0]{title, price, size, description, image, slug}
   `,
     { slug }
   );
 };
-
-// *[_type == "product"]{title, "categories": categories[]->title, "defaultProductVariant": images[], price, size }
 
 export default ProductDetails;

@@ -24,15 +24,15 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/collections/tops": [
+    "/collections/accessories": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/collections/tops.js"
+      "static/chunks/pages/collections/accessories.js"
     ],
-    "/products/[slug]": [
+    "/collections/new": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/products/[slug].js"
+      "static/chunks/pages/collections/new.js"
     ]
   },
   "ampFirstPages": []
