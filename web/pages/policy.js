@@ -2,7 +2,7 @@ import Head from "next/head";
 
 const Policy = () => {
   return (
-    <div>
+    <div className="policy-container">
       <Head>
         <title>OJOS | Policy</title>
         <link rel="icon" href="/favicon.ico" />

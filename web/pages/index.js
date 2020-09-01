@@ -49,58 +49,58 @@ const Home = (props) => {
       <Container fluid>
         <Row>
           <Col xs={12} sm={12} md={5}>
-            <a href={imageOne[0].url}>
-              <div className="landing-image-one">
+            <div className="landing-image-one">
+              <a href={imageOne[0].url}>
                 <Image
                   fluid
                   src={urlFor(imageOne[0].image).quality(100).url()}
                 />
-                <a href={imageOne[0].url} className="image-description">
-                  {imageOne[0].description}
-                </a>
-              </div>
-            </a>
+              </a>
+              <a href={imageOne[0].url} className="image-description">
+                {imageOne[0].description}
+              </a>
+            </div>
           </Col>
           <Col xs={12} sm={12} md={7}>
-            <a href={imageTwo[0].url}>
-              <div className="landing-image-two">
+            <div className="landing-image-two">
+              <a href={imageTwo[0].url}>
                 <Image
                   fluid
                   src={urlFor(imageTwo[0].image).quality(100).url()}
                 />
-                <a href={imageTwo[0].url} className="image-description">
-                  {imageTwo[0].description}
-                </a>
-              </div>
-            </a>
+              </a>
+              <a href={imageTwo[0].url} className="image-description">
+                {imageTwo[0].description}
+              </a>
+            </div>
           </Col>
         </Row>
         <Row>
           <Col xs={12} sm={12} md={6}>
-            <a href={imageThree[0].url}>
-              <div className="landing-image-three">
+            <div className="landing-image-three">
+              <a href={imageThree[0].url}>
                 <Image
                   fluid
                   src={urlFor(imageThree[0].image).quality(100).url()}
                 />
-                <a href={imageThree[0].url} className="image-description">
-                  {imageThree[0].description}
-                </a>
-              </div>
-            </a>
+              </a>
+              <a href={imageThree[0].url} className="image-description">
+                {imageThree[0].description}
+              </a>
+            </div>
           </Col>
           <Col xs={12} sm={12} md={6}>
-            <a href={imageFour[0].url}>
-              <div className="landing-image-four">
+            <div className="landing-image-four">
+              <a href={imageFour[0].url}>
                 <Image
                   fluid
                   src={urlFor(imageFour[0].image).quality(100).url()}
                 />
-                <a href={imageFour[0].url} className="image-description">
-                  {imageFour[0].description}
-                </a>
-              </div>
-            </a>
+              </a>
+              <a href={imageFour[0].url} className="image-description">
+                {imageFour[0].description}
+              </a>
+            </div>
           </Col>
         </Row>
       </Container>

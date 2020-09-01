@@ -8,13 +8,13 @@ import urlFor from "../../imageUrlBuilder";
 import Image from "react-bootstrap/Image";
 
 const ProductDetails = (props) => {
-  const { title, price, sizes, description, image, imageUrl } = props;
+  const { title, price, sizes, description, image, imageUrl, quantity } = props;
   const [size, setSize] = React.useState();
 
   const product = {
     name: { title },
     price: { price },
-    quantity: 1,
+    quantity: { quantity },
     image: { imageUrl },
     size: { size },
   };
@@ -42,10 +42,22 @@ const ProductDetails = (props) => {
         <div id="product-details">
           <h1>{title}</h1>
           <p>${price}</p>
-          <select onChange={handleChange}>
-            {sizes && sizes.map((size) => <option value={size}>{size}</option>)}
+          <select id="size-select" onChange={handleChange}>
+            <option key="null">Select Size</option>
+            {sizes &&
+              sizes.map((size) => (
+                <option value={size} key={size}>
+                  {size}
+                </option>
+              ))}
           </select>
-          <button>Add to Cart</button>
+          {size === undefined || size === "Select Size" ? (
+            <button disabled className="add-to-cart-btn">
+              Add to Cart
+            </button>
+          ) : (
+            <button className="add-to-cart-btn">Add to Cart</button>
+          )}
           <h4>Description</h4>
           <p>{description}</p>
           <h4>Sizing</h4>
@@ -73,7 +85,7 @@ ProductDetails.getInitialProps = async function (context) {
   const { slug = " " } = context.query;
   return await client.fetch(
     `
-    *[_type == "product" && slug.current == $slug][0]{title, price, sizes, description, image, slug, "imageUrl": image.asset->url}
+    *[_type == "product" && slug.current == $slug][0]{title, price, sizes, description, image, slug, "imageUrl": image.asset->url, quantity}
   `,
     { slug }
   );

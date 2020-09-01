@@ -34,6 +34,11 @@ export default {
       type: "number",
     },
     {
+      name: "quantity",
+      title: "Quantity",
+      type: "number",
+    },
+    {
       name: "image",
       title: "Image",
       type: "image",
@@ -46,17 +51,17 @@ export default {
     //   name: 'defaultProductVariant',
     //   type: 'productVariant'
     // },
-    // {
-    //   title: "Variants",
-    //   name: "variants",
-    //   type: "array",
-    //   of: [
-    //     {
-    //       title: "Variant",
-    //       type: "productVariant",
-    //     },
-    //   ],
-    // },
+    {
+      title: "Variants",
+      name: "variants",
+      type: "array",
+      of: [
+        {
+          title: "Variant",
+          type: "productVariant",
+        },
+      ],
+    },
     // {
     //   title: 'Tags',
     //   name: 'tags',

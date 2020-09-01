@@ -24,7 +24,7 @@ const Jewelry = (props) => {
         <Row>
           {products.length ? (
             products.map((product) => (
-              <Col xs={12} sm={6} md={6} lg={4}>
+              <Col xs={12} sm={6} md={6} lg={4} key={product.slug}>
                 <div className="product-section">
                   <a href={"/products/" + product.slug.current}>
                     <Image

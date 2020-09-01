@@ -18,11 +18,11 @@ export default {
     //   name: 'price',
     //   type: 'number'
     // },
-    // {
-    //   title: "Quantity",
-    //   name: "quantity",
-    //   type: "number",
-    // },
+    {
+      title: "Quantity",
+      name: "quantity",
+      type: "number",
+    },
     // {
     //   title: 'Taxable',
     //   name: 'taxable',

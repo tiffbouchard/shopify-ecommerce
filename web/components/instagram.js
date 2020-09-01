@@ -31,6 +31,7 @@ function Instagram() {
           <a
             href={"http://instagram.com/p/" + image.node.shortcode}
             target="blank"
+            key={image.node.shortcode}
           >
             <img src={image.node.thumbnail_src} />
           </a>

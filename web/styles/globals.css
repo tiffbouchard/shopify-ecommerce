@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Shadows+Into+Light&display=swap');
 
 * {
-  font-family: 'Gaegu', 'Shadows Into Light', serif;
+  font-family: 'Gaegu', 'Shadows Into Light', sans-serif;
 }
 main {
   min-height: 100vh;
@@ -150,9 +150,16 @@ main {
   background-color: rgb(179, 230, 179);
 }
 /* Shop Policy */
+.policy-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  margin: -40px 0 0 0;
+}
 .policy-body {
+  max-width: 900px;
   text-align: center;
-  margin: -10px 80px 20px 80px;
 }
 /* Nav Bar Dropdown */
 a.dropdown-toggle::after {
@@ -239,4 +246,111 @@ a.dropdown-toggle::after {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.add-to-cart-btn {
+  background-color: rgb(179, 230, 179);
+  border: none;
+  padding: 5px;
+}
+.add-to-cart-btn:hover {
+  transition: 0.5s ease-in-out;
+  background-color: rgb(167, 218, 167);
+}
+#size-select {
+  height: 35px;
+  border-radius: 0;
+}
+/* Navigation */
+.navigation {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center ;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+}
+.navigation > div a {
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+}
+.navigation > div a:hover {
+  text-decoration: none;
+  color: rgb(113, 163, 113);
+}
+.navigation > div button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  padding: 10px;
+}
+.navigation > div button:hover {
+  text-decoration: none;
+  color: rgb(113, 163, 113);
+
+}
+.navigation > div button:focus {
+  outline: none;
+}
+#nav-header {
+  font-size: 50px;
+}
+.dropdown-nav {
+  display: none;
+}
+.dropdown-nav-hover >  a {
+  color: black;
+  padding: 10px;
+}
+.dropdown-nav-hover >  a:hover {
+  text-decoration: none;
+  color: rgb(113, 163, 113);
+}
+.dropdown-nav-hover {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  justify-content: flex-start;
+  align-items: center ;
+  flex-wrap: wrap;
+  top: 60px;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+}
+@media only screen and (max-width: 420px) {
+  .dropdown-nav-hover {
+    height: 90px;
+  }
+}
+/* Search Form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+.search-form-input {
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+}
+.search-form-input-button {
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background-color: rgb(173, 223, 173);
+}
+.search-form-input-button:hover {
+  background-color: rgb(206, 238, 206);
 }
