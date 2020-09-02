@@ -1,8 +1,11 @@
 import Head from "next/head";
+import { shopContext, ShopContext } from "../context/shopContext";
 
 import Table from "react-bootstrap/Table";
 
-const Cart = () => {
+const Cart = (props) => {
+  const { checkout } = React.useContext(ShopContext);
+
   return (
     <div>
       <Head>
@@ -10,7 +13,7 @@ const Cart = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1 className="page-title">Cart</h1>
-      <div class="cart-wrapper">
+      <div className="cart-wrapper">
         <Table className="cart-table">
           <thead>
             <tr>
@@ -75,7 +78,9 @@ const Cart = () => {
             </tr>
           </tbody>
         </Table>
-        <button className="cart-checkout-btn-mobile">Checkout</button>
+        <button role="link" className="cart-checkout-btn-mobile">
+          Checkout
+        </button>
       </div>
     </div>
   );

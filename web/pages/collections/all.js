@@ -1,8 +1,7 @@
 import Head from "next/head";
+import { useEffect } from "react";
 
-//Sanity.io
-import client from "../../client";
-import urlFor from "../../imageUrlBuilder";
+import { ShopContext } from "../../context/shopContext";
 
 //Bootstrap
 import Container from "react-bootstrap/Container";
@@ -11,8 +10,14 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 const AllProducts = (props) => {
-  const { products = [] } = props;
+  const { fetchAllProducts, products } = React.useContext(ShopContext);
 
+  useEffect(() => {
+    fetchAllProducts();
+    return () => {};
+  }, [fetchAllProducts]);
+
+  if (!products) return <div>Loading...</div>;
   return (
     <div>
       <Head>
@@ -22,24 +27,24 @@ const AllProducts = (props) => {
       <h1 className="page-title">All</h1>
       <Container fluid="lg">
         <Row>
-          {products.length ? (
+          {products ? (
             products.map((product) => (
-              <Col xs={12} sm={6} md={6} lg={4} key={product.slug}>
+              <Col xs={12} sm={6} md={6} lg={4} key={product.id}>
                 <div className="product-section">
-                  <a href={"/products/" + product.slug.current}>
+                  <a href={`/products/${product.id}`}>
                     <Image
                       className="products"
                       fluid
-                      src={urlFor(product.image).quality(100).url()}
+                      src={product.images[0].src}
                     />
                   </a>
                 </div>
                 <div className="product-description">
-                  <a href="/products/:id" className="product-name">
+                  <a href={`/products/${product.id}`} className="product-name">
                     {product.title}
                   </a>
                   <a href="/products/:id" className="product-price">
-                    {product.price}
+                    ${product.variants[0].price}
                   </a>
                 </div>
               </Col>
@@ -55,9 +60,4 @@ const AllProducts = (props) => {
   );
 };
 
-AllProducts.getInitialProps = async () => ({
-  products: await client.fetch(`
-    *[_type == "product"]|order(_createdAt desc){title, price, slug, image}
-  `),
-});
 export default AllProducts;

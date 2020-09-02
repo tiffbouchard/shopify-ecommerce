@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
-import SubscribeModal from "./modal-subscribe";
+import SubscribeModal from "./modal_subscribe";
 
 const Footer = () => {
   const [modalShow, setModalShow] = React.useState(false);
