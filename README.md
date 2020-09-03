@@ -47,6 +47,7 @@ Click [here]()
 ## Next Steps
 - Connect Sanity and Shopify to sync product data with webhooks/lambda functions in order to provide seamless management of products for client (not sure how to do this, but will find out)
 - Function to see if an item is already in the cart, if so disable button and show message saying the item is already in your cart (since there is only one quantity) - this should be automatically disabled, not sure why the SDK allows you to continue adding items when quantity = 1
+- Add ability to view how many things are in the cart for better UX (right now just have a toast)
 - Search page
 - Newsletter
 - Contact + custom orders form
