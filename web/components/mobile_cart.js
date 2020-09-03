@@ -32,7 +32,7 @@ const MobileCart = (props) => {
               ))}
             <tr>
               <td></td>
-              <td>Subtotal: $100.00</td>
+              <td>Subtotal: ${checkout.totalPrice}</td>
             </tr>
           </tbody>
         </Table>

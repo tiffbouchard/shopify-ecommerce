@@ -22,7 +22,6 @@ const Cart = (props) => {
               <th scope="col"></th>
               <th scope="col">Quantity</th>
               <th scope="col">Price</th>
-              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -41,19 +40,16 @@ const Cart = (props) => {
                   <td>{item.title}</td>
                   <td>{item.quantity}</td>
                   <td>${item.variant.price}</td>
-                  <td></td>
                 </tr>
               ))}
             <tr>
               <td scope="row"></td>
               <td></td>
-              <td></td>
               <td>Subtotal</td>
-              <td>$100.00</td>
+              <td>${checkout.totalPrice}</td>
             </tr>
             <tr>
               <td scope="row"></td>
-              <td></td>
               <td></td>
               <td></td>
               <td>
