@@ -1,30 +1,57 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# OJOS
 
-## Getting Started
+## Table of Contents
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Planning](#planning)
+- [Screenshots](#screenshots)
+- [Getting Started](#getting-started)
+- [Next Steps](#next-steps)
+- [Contributors](#contributors)
+- [Installations](#installation)
 
-First, run the development server:
+## About 
+- Worked closely with client think up design and functionality needed
+- Used figma to gain feedback on designs through comments
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Features
+- Used shopify and sanity for backend and headless CMS so that easier management for client and ability to scale if need be
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tech Stack
+- HTML + CSS
+- Javascript
+- Next.js/React
+- Bootstrap
+- Shopify JS Buy SDK
+- Sanity.io 
+- Instagram API
+- Mailchimp & EmailJS
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Planning & Design
+- [Figma Wireframes & Prototype](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
-## Learn More
+## Screenshots
+<img src="" caption=""/>
+<img src="" caption=""/>
+<img src="" caption=""/>
+<img src="" caption=""/>
+<img src="" caption=""/>
+<img src="" caption=""/>
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Getting Started 
+Click [here]()
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Next Steps
+- Connect Sanity and Shopify to sync product data with webhooks/lambda functions in order to provide seamless management of products for client (not sure how to do this, but will find out)
+- Function to see if an item is already in the cart, if so disable button and show message saying the item is already in your cart (since there is only one quantity) - this should be automatically disabled, not sure why the SDK allows you to continue adding items when quantity = 1
+- Search page
+- Newsletter
+- Contact + custom orders form
+- Reorganize CSS (possibly transfer to styled components) + understand better project structure for Next.js + organization
+- Remove all hardcoded info and transfer to Sanity CMS to allow client flexibility of updating content 
+- Add better accessibility, only on certain elements now
+- Add ability to filter on pages - Newest etc. Price low-high 
+- Ability to display multiple photos of details page in a carousel 
