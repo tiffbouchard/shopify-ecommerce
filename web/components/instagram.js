@@ -7,7 +7,7 @@ function Instagram() {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch("https://www.instagram.com/unikaswim/?__a=1")
+    fetch("https://www.instagram.com/is_ojos/?__a=1")
       .then((res) => res.json())
       .then(
         (result) => {

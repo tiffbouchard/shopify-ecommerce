@@ -2,6 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
+  "/collections/new": "pages/collections/new.js",
   "/": "pages/index.js",
-  "/cart": "pages/cart.js"
+  "/about": "pages/about.js",
+  "/collections/tops": "pages/collections/tops.js",
+  "/cart": "pages/cart.js",
+  "/search": "pages/search.js"
 }

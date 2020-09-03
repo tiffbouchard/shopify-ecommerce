@@ -2,6 +2,7 @@
 
 * {
   font-family: 'Gaegu', 'Shadows Into Light', sans-serif;
+  font-display: swap;
 }
 main {
   min-height: 100vh;
@@ -141,10 +142,10 @@ main {
   padding: 10px;
   margin: 10px;
   border: none;
-  background-color: rgb(191, 243, 191);
+  background-color: #addfad;
 }
 .contact-form-input-button:hover {
-  background-color: rgb(179, 230, 179);
+  background-color:#a4d1a4;
 }
 /* Shop Policy */
 .policy-container {
@@ -232,13 +233,13 @@ a.dropdown-toggle::after {
   align-items: center;
 }
 .add-to-cart-btn {
-  background-color: rgb(179, 230, 179);
+  background-color: #addfad;
   border: none;
   padding: 10px;
 }
 .add-to-cart-btn:hover {
   transition: 0.5s ease-in-out;
-  background-color: rgb(167, 218, 167);
+  background-color: #a4d1a4;
 }
 #size-select {
   height: 35px;
@@ -266,7 +267,7 @@ a.dropdown-toggle::after {
 }
 .navigation > div a:hover {
   text-decoration: none;
-  color: rgb(113, 163, 113);
+  color: #addfad;
 }
 .navigation > div button {
   background-color: transparent;
@@ -277,7 +278,7 @@ a.dropdown-toggle::after {
 }
 .navigation > div button:hover {
   text-decoration: none;
-  color: rgb(113, 163, 113);
+  color: #addfad;
 
 }
 .navigation > div button:focus {
@@ -295,7 +296,7 @@ a.dropdown-toggle::after {
 }
 .dropdown-nav-hover >  a:hover {
   text-decoration: none;
-  color: rgb(113, 163, 113);
+  color: #addfad;
 }
 .dropdown-nav-hover {
   display: flex;
@@ -333,10 +334,10 @@ a.dropdown-toggle::after {
   padding: 10px;
   margin: 10px;
   border: none;
-  background-color: rgb(173, 223, 173);
+  background-color: #addfad;
 }
 .search-form-input-button:hover {
-  background-color: rgb(206, 238, 206);
+  background-color: #a4d1a4;
 }
 .ig-spinner {
   display: flex;
