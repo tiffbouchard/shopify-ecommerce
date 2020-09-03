@@ -13,7 +13,8 @@ class ShopProvider extends React.Component {
     products: [],
     product: {},
     checkout: {},
-    checkoutTotal: 0,
+    // checkoutTotal: 0,
+    searchResults: [],
   };
 
   componentDidMount() {
@@ -94,6 +95,21 @@ class ShopProvider extends React.Component {
     );
   };
 
+  fetchBySearch = async (query) => {
+    const products = await client.product.fetchAll();
+    console.log(products);
+    const searchResults = products.filter((product) => {
+      const productTitle = product.title.toUpperCase();
+      const productType = product.productType.toUpperCase();
+      const userQuery = query.toUpperCase();
+      return (
+        productTitle.includes(userQuery) || productType.includes(userQuery)
+      );
+    });
+    this.setState({ searchResults: searchResults });
+    console.log(searchResults);
+  };
+
   // checkIfItemInCart = async (checkout, itemId) => {
   //   const currentCheckout = checkout;
   //   for (item in currentCheckout.lineItems) {
@@ -113,6 +129,7 @@ class ShopProvider extends React.Component {
           addItemToCheckout: this.addItemToCheckout,
           removeItemFromCheckout: this.removeItemFromCheckout,
           fetchCollection: this.fetchCollection,
+          fetchBySearch: this.fetchBySearch,
         }}
       >
         {this.props.children}

@@ -16,7 +16,7 @@ const Cart = (props) => {
         </Spinner>
       </div>
     );
-  if (checkout.lineItems && checkout.lineItems.length < 1)
+  else if (checkout.lineItems && checkout.lineItems.length < 1)
     return (
       <div>
         <Head>
@@ -47,7 +47,7 @@ const Cart = (props) => {
             </tr>
           </thead>
           <tbody>
-            {checkout.lineItems &&
+            {checkout.lineItems.length &&
               checkout.lineItems.map((item) => (
                 <tr>
                   <td scope="row">
@@ -68,7 +68,7 @@ const Cart = (props) => {
                   </td>
                   <td>{item.title}</td>
                   <td>{item.quantity}</td>
-                  <td>${item.variant.price}</td>
+                  <td>${item.variant.price && item.variant.price}</td>
                 </tr>
               ))}
             <tr>

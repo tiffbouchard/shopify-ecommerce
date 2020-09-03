@@ -225,7 +225,7 @@ a.dropdown-toggle::after {
   justify-content: center;
   align-items: center;
 }
-.no-products-msg {
+.no-products-msg, .no-results-msg {
   width: 100%;
   display: flex;
   justify-content: center;
