@@ -104,7 +104,6 @@ const Home = (props) => {
           </Col>
         </Row>
       </Container>
-      <h4 className="follow-header">FOLLOW OJOS ON INSTAGRAM</h4>
       <Instagram />
     </div>
   );

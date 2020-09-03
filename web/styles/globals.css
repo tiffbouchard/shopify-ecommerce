@@ -98,10 +98,6 @@ main {
   transition: 0.5s;
   opacity: 0.8;
 }
-.follow-header {
-  text-align: center;
-  margin-top: 30px;
-}
 /* About */
 .about-image-one {
   max-width: auto;
@@ -186,17 +182,20 @@ a.dropdown-toggle::after {
   padding: 15px;
 }
 .cart-mobile {
-  visibility: hidden;
+  display: none;
 }
 .cart-checkout-btn-mobile {
   display: none;
+}
+.cart-image {
+  max-width: 100px;
 }
 @media only screen and (min-width: 200px) and (max-width: 700px) {
   .cart-table {
     display: none;
   }
   .cart-mobile {
-    visibility: visible;  
+    display: inline-table;
   }
   .cart-checkout-btn-mobile {
     border: none;

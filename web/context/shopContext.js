@@ -54,9 +54,16 @@ class ShopProvider extends React.Component {
       lineItemsToAdd
     );
     this.setState({ checkout: checkout });
-    this.setState({ checkoutTotal: this.state.checkoutTotal + 1 });
+    const checkoutTotal = parseInt(this.state.checkoutTotal, 10) + 1;
+    this.setState({ checkoutTotal: checkoutTotal });
     localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
   };
+
+  // incrementCheckoutTotal = async () => {
+  //   const checkoutTotal =
+  //   this.setState({ checkoutTotal: this.state.checkoutTotal });
+  //   localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
+  // }
 
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
