@@ -3,10 +3,19 @@ import MobileCart from "../components/mobile_cart";
 import { ShopContext } from "../context/shopContext";
 
 import Table from "react-bootstrap/Table";
+import Spinner from "react-bootstrap/Spinner";
 
 const Cart = (props) => {
   const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
 
+  if (!checkout.lineItems)
+    return (
+      <div className="page-spinner">
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </div>
+    );
   if (checkout.lineItems && checkout.lineItems.length < 1)
     return (
       <div>

@@ -11,16 +11,11 @@ import { useEffect } from "react";
 
 const ProductDetails = (props) => {
   // const [size, setSize] = React.useState();
-  // const [product, setProduct] = React.useState();
 
   // const handleChange = (event) => {
   //   setSize(event.target.value);
   // };
 
-  // const handleClick = () => {
-  //   setProduct(currentProduct);
-  //   localStorage.setItem("product", JSON.stringify(currentProduct));
-  // };
   const [show, setShow] = React.useState(false);
 
   let handle = props.params.handle;
@@ -92,7 +87,11 @@ const ProductDetails = (props) => {
         </div>
         <div id="product-details">
           <h1>{product.title}</h1>
-          <p>${product.variants[0].price}</p>
+          <p>
+            {product.availableForSale
+              ? "$" + product.variants[0].price
+              : "Sold out"}
+          </p>
           {/* Leave in in case sizes need to be implemented */}
           {/* <select id="size-select" onChange={handleChange}>
             <option key="null">Select Size</option>
@@ -105,16 +104,28 @@ const ProductDetails = (props) => {
                 </button>
           ) : (
           )} */}
-          <button
-            className="add-to-cart-btn"
-            onClick={() => {
-              addItemToCheckout(product.variants[0].id, 1);
-              setShow(true);
-            }}
-          >
-            Add to Cart
-          </button>
-
+          {product.availableForSale ? (
+            <button
+              className="add-to-cart-btn"
+              onClick={() => {
+                addItemToCheckout(product.variants[0].id, 1);
+                setShow(true);
+              }}
+            >
+              Add to Cart
+            </button>
+          ) : (
+            <button
+              disabled
+              className="add-to-cart-btn"
+              onClick={() => {
+                addItemToCheckout(product.variants[0].id, 1);
+                setShow(true);
+              }}
+            >
+              Add to Cart
+            </button>
+          )}
           <h4>Description</h4>
           <p>{product.description}</p>
           <h4>Sizing</h4>

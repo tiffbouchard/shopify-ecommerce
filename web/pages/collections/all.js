@@ -55,7 +55,9 @@ const AllProducts = (props) => {
                     {product.title}
                   </a>
                   <a href="/products/:id" className="product-price">
-                    ${product.variants[0].price}
+                    {product.availableForSale
+                      ? "$" + product.variants[0].price
+                      : "Sold out"}
                   </a>
                 </div>
               </Col>
