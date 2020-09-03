@@ -33,26 +33,6 @@
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/about.js"
-    ],
-    "/cart": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/cart.js"
-    ],
-    "/collections/new": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/collections/new.js"
-    ],
-    "/collections/tops": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/collections/tops.js"
-    ],
-    "/search": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/search.js"
     ]
   },
   "ampFirstPages": []

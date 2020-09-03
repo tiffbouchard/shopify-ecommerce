@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Shadows+Into+Light&display=swap');
 
 * {
-  font-family: 'Gaegu', 'Shadows Into Light', sans-serif;
-  font-display: swap;
+  font-family: 'Gaegu', 'Shadows Into Light';
 }
 main {
   min-height: 100vh;
