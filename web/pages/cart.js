@@ -5,8 +5,21 @@ import { ShopContext } from "../context/shopContext";
 import Table from "react-bootstrap/Table";
 
 const Cart = (props) => {
-  const { checkout } = React.useContext(ShopContext);
+  const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
 
+  if (checkout.lineItems && checkout.lineItems.length < 1)
+    return (
+      <div>
+        <Head>
+          <title>OJOS | Cart</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <h1 className="page-title">Cart</h1>
+        <div className="cart-wrapper">
+          <div>Your cart is empty!</div>
+        </div>
+      </div>
+    );
   return (
     <div>
       <Head>
@@ -29,7 +42,14 @@ const Cart = (props) => {
               checkout.lineItems.map((item) => (
                 <tr>
                   <td scope="row">
-                    <button className="cart-delete-btn">X</button>
+                    <button
+                      className="cart-delete-btn"
+                      onClick={() =>
+                        removeItemFromCheckout(checkout.id, item.id)
+                      }
+                    >
+                      X
+                    </button>
                     <a href="instagram.com">
                       <img
                         className="cart-image"

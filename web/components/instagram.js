@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Spinner } from "react-bootstrap";
 
 function Instagram() {
   const [error, setError] = useState(null);
@@ -23,7 +24,13 @@ function Instagram() {
   if (error) {
     return <div>Error: {error.message}</div>;
   } else if (!isLoaded) {
-    return <div>Loading...</div>;
+    return (
+      <div className="ig-spinner">
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </div>
+    );
   } else {
     return (
       <div className="instagram-feed">

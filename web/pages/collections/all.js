@@ -8,6 +8,7 @@ import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Spinner from "react-bootstrap/Spinner";
 
 const AllProducts = (props) => {
   const { fetchAllProducts, products } = React.useContext(ShopContext);
@@ -17,7 +18,14 @@ const AllProducts = (props) => {
     return () => {};
   }, [fetchAllProducts]);
 
-  if (!products) return <div>Loading...</div>;
+  if (!products)
+    return (
+      <div className="page-spinner">
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </div>
+    );
   return (
     <div>
       <Head>
@@ -31,7 +39,7 @@ const AllProducts = (props) => {
             products.map((product) => (
               <Col xs={12} sm={6} md={6} lg={4} key={product.id}>
                 <div className="product-section">
-                  <a href={`/products/${product.id}`}>
+                  <a href={`/products/${product.handle}`}>
                     <Image
                       className="products"
                       fluid
@@ -40,7 +48,10 @@ const AllProducts = (props) => {
                   </a>
                 </div>
                 <div className="product-description">
-                  <a href={`/products/${product.id}`} className="product-name">
+                  <a
+                    href={`/products/${product.handle}`}
+                    className="product-name"
+                  >
                     {product.title}
                   </a>
                   <a href="/products/:id" className="product-price">

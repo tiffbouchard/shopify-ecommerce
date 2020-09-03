@@ -88,6 +88,7 @@ main {
 }
 /* Instagram Feed */
 .instagram-feed {
+  margin: 50px 0;
   display: flex;
 }
 .instagram-feed a > img {
@@ -224,16 +225,6 @@ a.dropdown-toggle::after {
   justify-content: center;
   align-items: center;
 }
-#product-details-page {
-  /* height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-#product-details-container {
-  /* width: 40%;
-  display: flex; */
-}
 .no-products-msg {
   width: 100%;
   display: flex;
@@ -243,7 +234,7 @@ a.dropdown-toggle::after {
 .add-to-cart-btn {
   background-color: rgb(179, 230, 179);
   border: none;
-  padding: 5px;
+  padding: 10px;
 }
 .add-to-cart-btn:hover {
   transition: 0.5s ease-in-out;
@@ -346,4 +337,14 @@ a.dropdown-toggle::after {
 }
 .search-form-input-button:hover {
   background-color: rgb(206, 238, 206);
+}
+.ig-spinner {
+  display: flex;
+  justify-content: center;
+}
+.page-spinner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -4,8 +4,6 @@ const Navigation = () => {
   const [clicked, setClicked] = React.useState(false);
   const toggleClick = () => setClicked(!clicked);
 
-  const { checkoutTotal } = React.useContext(ShopContext);
-
   return (
     <>
       <nav className="navigation">
@@ -18,7 +16,7 @@ const Navigation = () => {
         </div>
         <div id="nav-two">
           <a href="/search">Search</a>
-          <a href="/cart">Cart {checkoutTotal > 0 ? checkoutTotal : "()"}</a>
+          <a href="/cart">Cart</a>
         </div>
       </nav>
       <nav className={clicked ? "dropdown-nav-hover" : "dropdown-nav"}>

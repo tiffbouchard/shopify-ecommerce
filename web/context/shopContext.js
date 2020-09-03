@@ -59,21 +59,39 @@ class ShopProvider extends React.Component {
     localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
   };
 
-  // incrementCheckoutTotal = async () => {
-  //   const checkoutTotal =
-  //   this.setState({ checkoutTotal: this.state.checkoutTotal });
-  //   localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
-  // }
+  removeItemFromCheckout = async (checkoutId, lineItemsIds) => {
+    const checkoutIdToModify = await checkoutId; // ID of an existing checkout
+    const lineItemsIdToRemove = await lineItemsIds;
+    // Remove an item from the checkout
+    client.checkout
+      .removeLineItems(checkoutIdToModify, lineItemsIdToRemove)
+      .then((checkout) => {
+        // Do something with the updated checkout
+        this.setState({ checkout: checkout });
+        const checkoutTotal = parseInt(this.state.checkoutTotal, 10) - 1;
+        this.setState({ checkoutTotal: checkoutTotal });
+        localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
+      });
+  };
 
   fetchAllProducts = async () => {
     const products = await client.product.fetchAll();
     this.setState({ products: products });
   };
 
-  fetchProductById = async (id) => {
-    const product = await client.product.fetch(id);
+  fetchProductByHandle = async (handle) => {
+    const product = await client.product.fetchByHandle(handle);
     this.setState({ product: product });
   };
+
+  // checkIfItemInCart = async (checkout, itemId) => {
+  //   const currentCheckout = checkout;
+  //   for (item in currentCheckout.lineItems) {
+  //     if (item.id === itemId) {
+  //       this.setState({ itemInCart: true });
+  //     }
+  //   }
+  // };
 
   render() {
     return (
@@ -81,9 +99,9 @@ class ShopProvider extends React.Component {
         value={{
           ...this.state,
           fetchAllProducts: this.fetchAllProducts,
-          fetchProductById: this.fetchProductById,
-          incrementCheckoutTotal: this.incrementCheckoutTotal,
+          fetchProductByHandle: this.fetchProductByHandle,
           addItemToCheckout: this.addItemToCheckout,
+          removeItemFromCheckout: this.removeItemFromCheckout,
         }}
       >
         {this.props.children}
