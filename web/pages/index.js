@@ -16,7 +16,7 @@ import { Row, Col } from "react-bootstrap";
 const Home = (props) => {
   const { images = [] } = props;
 
-  // Assigns variables to specific images to maintain order (without this images would show up in random orders, and for ex. the index 0 would not necessarily correspond with imageOne - mostly for client so the titles in Sanity studio correspond with the placement of the specific image)
+  // Assigns variables to specific images to maintain order (without this images would show up in random orders, and for ex. the index 0 would not necessarily correspond with imageOne - mostly for client so the titles in Sanity studio correspond with the placement of the specific image, maybe find better way to accomplish)
   const imageOne = images.filter((image) => {
     return image.title === "Image One";
   });
@@ -32,13 +32,6 @@ const Home = (props) => {
   const imageFour = images.filter((image) => {
     return image.title === "Image Four";
   });
-
-  // Show sub modal when page first loads..need to work on
-  // const [modalShow, setModalShow] = React.useState(false);
-
-  // useEffect(() => {
-  //   setModalShow(true);
-  // }, []);
 
   return (
     <div>

@@ -9,6 +9,7 @@ const client = Client.buildClient({
 
 class ShopProvider extends React.Component {
   state = {
+    collection: {},
     products: [],
     product: {},
     checkout: {},
@@ -84,6 +85,15 @@ class ShopProvider extends React.Component {
     this.setState({ product: product });
   };
 
+  fetchCollection = async (query) => {
+    const collections = await client.collection.fetchAllWithProducts();
+    collections.map((collection) =>
+      collection.title === query
+        ? this.setState({ collection: collection })
+        : null
+    );
+  };
+
   // checkIfItemInCart = async (checkout, itemId) => {
   //   const currentCheckout = checkout;
   //   for (item in currentCheckout.lineItems) {
@@ -102,6 +112,7 @@ class ShopProvider extends React.Component {
           fetchProductByHandle: this.fetchProductByHandle,
           addItemToCheckout: this.addItemToCheckout,
           removeItemFromCheckout: this.removeItemFromCheckout,
+          fetchCollection: this.fetchCollection,
         }}
       >
         {this.props.children}

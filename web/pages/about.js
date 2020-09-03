@@ -5,14 +5,6 @@ import Image from "react-bootstrap/Image";
 import { Row, Col } from "react-bootstrap";
 
 const About = () => {
-  // if (!checkout.lineItems)
-  //   return (
-  //     <div className="page-spinner">
-  //       <Spinner animation="border" role="status">
-  //         <span className="sr-only">Loading...</span>
-  //       </Spinner>
-  //     </div>
-  //   );
   return (
     <div>
       <Head>
