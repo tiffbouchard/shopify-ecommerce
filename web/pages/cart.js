@@ -59,12 +59,7 @@ const Cart = (props) => {
                     >
                       X
                     </button>
-                    <a href="instagram.com">
-                      <img
-                        className="cart-image"
-                        src={item.variant.image.src}
-                      />
-                    </a>
+                    <img className="cart-image" src={item.variant.image.src} />
                   </td>
                   <td>{item.title}</td>
                   <td>{item.quantity}</td>

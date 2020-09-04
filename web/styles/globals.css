@@ -1,5 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@300&family=Shadows+Into+Light&display=swap'); */
-
 * {
   font-family: 'Gaegu', 'Shadows Into Light';
 }
@@ -167,6 +165,7 @@ a.dropdown-toggle::after {
   border: none;
   background-color: transparent;
   color: red;
+  padding-left: 0px;
 } 
 .cart-wrapper {
   max-width: 100%;

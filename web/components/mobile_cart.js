@@ -4,7 +4,7 @@ import { ShopContext } from "../context/shopContext";
 import Table from "react-bootstrap/Table";
 
 const MobileCart = (props) => {
-  const { checkout } = React.useContext(ShopContext);
+  const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
 
   return (
     <div>
@@ -15,18 +15,20 @@ const MobileCart = (props) => {
               checkout.lineItems.map((item) => (
                 <tr>
                   <td scope="row">
-                    <a href="instagram.com">
-                      <img
-                        className="cart-image"
-                        src={item.variant.image.src}
-                      />
-                    </a>
+                    <img className="cart-image" src={item.variant.image.src} />
                   </td>
                   <td>
                     <p>{item.title}</p>
                     {/* <p>XS</p> */}
                     <p>${item.variant.price}</p>
-                    <button className="cart-delete-btn">Remove</button>
+                    <button
+                      className="cart-delete-btn"
+                      onClick={() =>
+                        removeItemFromCheckout(checkout.id, item.id)
+                      }
+                    >
+                      Remove
+                    </button>
                   </td>
                 </tr>
               ))}
