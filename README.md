@@ -1,4 +1,4 @@
-# OJOS ![https://vercel.com](https://res.cloudinary.com/anuraghazra/image/upload/v1597827714/powered-by-vercel_1_ug4uro.svg)
+# OJOS
 
 ## Table of Contents
 - [About](#about)
@@ -65,3 +65,5 @@ Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can f
 - Add better accessibility, only on certain elements now
 - Add ability to filter on pages - Newest etc. Price low-high 
 - Ability to display multiple photos of details page in a carousel 
+
+[https://vercel.com](https://res.cloudinary.com/anuraghazra/image/upload/v1597827714/powered-by-vercel_1_ug4uro.svg)
