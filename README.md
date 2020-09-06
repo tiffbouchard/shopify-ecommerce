@@ -33,7 +33,7 @@
 ### Design Process
 - [Figma Wireframes & Prototype](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
-## Screenshots
+### Screenshots
 <img src="" caption=""/>
 <img src="" caption=""/>
 <img src="" caption=""/>
