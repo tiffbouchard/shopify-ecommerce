@@ -1,4 +1,4 @@
-# OJOS
+OJOS
 
 ## Table of Contents
 - [About](#about)
