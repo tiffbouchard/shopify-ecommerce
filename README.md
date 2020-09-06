@@ -18,7 +18,7 @@ OJOS is an eCommerce project created for a small Toronto-based business that sel
 <!--- I think being able to give these individuals the ability to showcase their unique ideas is what propels our society towards something great.--->   
 
 ## Learning Outcomes
-During the process of desiging and building this project, I learned a lot. Specifically...
+During the process of designing and building this project, I learned a lot. Specifically...
   - Collaborating on design process through wireframing with Figma
   - Using React context hooks in order to share state among components rather than prop drilling
   - Using Next.js for server side rendering and built in API routes 
