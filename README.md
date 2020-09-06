@@ -16,12 +16,7 @@ OJOS is an eCommerce project created for a small Toronto-based business that sel
 
 > OJOS is currently preparing for product drops and public release, current content is still placeholder 
 
-This was my first eCommerce project and while it may not be perfect, I learned a lot, took on many challenges  and will continue to improve it. 
-
 <!--- I think being able to give these individuals the ability to showcase their unique ideas is what propels our society towards something great.--->   
-
-- Worked closely with client think up design and functionality needed
-- Used figma to gain feedback on designs through comments
 
 ### Learning Outcomes
 During the process of desiging and building this project, I learned a lot. Specifically...
