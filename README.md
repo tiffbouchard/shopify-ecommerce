@@ -4,7 +4,7 @@
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Planning & Design](#planning-&-design)
+- [Planning & Design](#planning-design)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
 - [Next Steps](#next-steps)
