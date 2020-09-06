@@ -4,12 +4,11 @@
 - [About](#about)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Planning & Design](#planning-design)
+- [Design Process](#design-process)
 - [Screenshots](#screenshots)
 - [Getting Started](#getting-started)
+- [Learning Outcomes](#learning-outcomes)
 - [Next Steps](#next-steps)
-- [Contributors](#contributors)
-- [Installations](#installation)
 
 ## About 
 - Worked closely with client think up design and functionality needed
@@ -28,7 +27,10 @@
 - Instagram API
 - Mailchimp & EmailJS
 
-## Planning & Design
+## Philosophy
+- 
+
+## Design Process
 - [Figma Wireframes & Prototype](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
 ## Screenshots
@@ -39,20 +41,27 @@
 <img src="" caption=""/>
 <img src="" caption=""/>
 
-
 ## Getting Started 
 Click [here]()
 
+## Learning Outcomes
+- collaborating on design process - with figma
+- how to use useContext hook 
+- how to use next.js
+- understanding headless CMS
+- understanding serverless 
+
 
 ## Next Steps
-- Connect Sanity and Shopify to sync product data with webhooks/lambda functions in order to provide seamless management of products for client (not sure how to do this, but will find out)
-- Function to see if an item is already in the cart, if so disable button and show message saying the item is already in your cart (since there is only one quantity) - this should be automatically disabled, not sure why the SDK allows you to continue adding items when quantity = 1
-- Add ability to view how many things are in the cart for better UX (right now just have a toast)
-- Search page
-- Newsletter
-- Contact + custom orders form
+- Connect Sanity and Shopify to sync product data with webhooks in order to provide seamless management of products for client (not sure how to do this, but will find out)
+- Function to see if an item is already in the cart, if so disable button and show message saying the item is already in your cart (since there is only a quantity of one per product)
+- Add ability to view how many things are in the cart for better UX (right now just have a toast everytime a visitor adds an item to their cart)
+- ~~Search page~~
+- Add ability to click outside of the dropdown to trigger dropdown close for better UX 
+- Newsletter with Mailchimp
+- Contact + custom orders form with EmailJS
 - Reorganize CSS (possibly transfer to styled components) + understand better project structure for Next.js + organization
-- Remove all hardcoded info and transfer to Sanity CMS to allow client flexibility of updating content 
+- Remove all hardcoded info and transfer to Sanity CMS to allow client flexibility of updating content (Policy and About pages)
 - Add better accessibility, only on certain elements now
 - Add ability to filter on pages - Newest etc. Price low-high 
 - Ability to display multiple photos of details page in a carousel 
