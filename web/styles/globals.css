@@ -1,11 +1,7 @@
 @font-face {
     font-family: 'Gaegu';
-    src: url('../public/fonts/Gaegu-Light.eot');
-    src: url('../public/fonts/Gaegu-Light.eot?#iefix') format('embedded-opentype'),
-        url('../public/fonts/Gaegu-Light.woff2') format('woff2'),
-        url('../public/fonts/Gaegu-Light.woff') format('woff'),
-        url('../public/fonts/Gaegu-Light.ttf') format('truetype'),
-        url('../public/fonts/Gaegu-Light.svg#Gaegu-Light') format('svg');
+    src: url('../public/fonts/Gaegu-Light.woff') format('woff');
+    src: url('../public/fonts/Gaegu-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: block;
@@ -386,7 +382,7 @@ main {
         margin-bottom: 40px;
     }
     #product-details {
-        margin: 20px 0;
+        margin: 0px 20px;
     }
 
 }
