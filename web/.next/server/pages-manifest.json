@@ -2,11 +2,5 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/cart": "pages/cart.js",
-  "/": "pages/index.js",
-  "/search": "pages/search.js",
-  "/policy": "pages/policy.js",
-  "/contact": "pages/contact.js",
-  "/collections/tops": "pages/collections/tops.js",
-  "/products/[handle]": "pages/products/[handle].js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js"
 }

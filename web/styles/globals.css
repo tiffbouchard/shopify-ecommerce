@@ -385,5 +385,8 @@ main {
         justify-content: center;
         margin-bottom: 40px;
     }
+    #product-details {
+        margin: 20px 0;
+    }
 
 }
