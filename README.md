@@ -1,4 +1,6 @@
-# OJOS
+<center>
+<img src="./web/public/header.png" alt="ojos-header"/>
+</center>
 
 ## Table of Contents
 - [About](#about)
@@ -46,13 +48,13 @@ During the process of designing and building this project, I learned a lot. Spec
 ## Preview
 
 ### Browse
-<img src="./web/public/gifs/ojos.gif" caption=""/>
+<img src="./web/public/gifs/ojos.gif" alt="browse-gif"/>
 
 ### Checkout
-<img src="./web/public/gifs/checkout.gif" caption=""/>
+<img src="./web/public/gifs/checkout.gif" alt="checkout-gif"/>
 
 ### Search
-<img src="./web/public/gifs/search.gif" caption=""/>
+<img src="./web/public/gifs/search.gif" alt="search-gif"/>
 
 ## Getting Started 
 Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can find it [here]()
