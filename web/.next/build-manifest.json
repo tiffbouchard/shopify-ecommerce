@@ -29,11 +29,6 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/collections/tops": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/collections/tops.js"
-    ],
     "/products/[handle]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
