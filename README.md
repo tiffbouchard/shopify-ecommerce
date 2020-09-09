@@ -13,9 +13,7 @@
 ## About 
 OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials. Supporting others creative visions and helping them make them reality is what being a developer is about to me and building things that help others make their ideas real. As one of the first real projects it could have not embodied my values and interests more especially as a lover of fashion and supporter of sustainability and a deep respect for small business owners with unique visions. 
 
-> OJOS is currently preparing for product drops and public release and all site content is currently placeholder
-
-<!--- I think being able to give these individuals the ability to showcase their unique ideas is what propels our society towards something great.--->   
+> OJOS is currently preparing for product drops and public release and all site content is currently placeholder 
 
 ## Learning Outcomes
 During the process of designing and building this project, I learned a lot. Specifically...
@@ -45,8 +43,16 @@ During the process of designing and building this project, I learned a lot. Spec
 - Finally I put together a minimal interative prototype to show the owner how the flow of the site would be
 - View Figma wireframes & prototypes [here](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
-## Screenshots
-<img src="" caption=""/>
+## Preview
+
+### Browse
+<img src="./web/public/gifs/ojos.gif" caption=""/>
+
+### Checkout
+<img src="./web/public/gifs/checkout.gif" caption=""/>
+
+### Search
+<img src="./web/public/gifs/search.gif" caption=""/>
 
 ## Getting Started 
 Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can find it [here]()

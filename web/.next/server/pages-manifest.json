@@ -2,9 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/contact": "pages/contact.js",
-  "/collections/bottoms": "pages/collections/bottoms.js",
   "/products/[handle]": "pages/products/[handle].js",
-  "/": "pages/index.js",
-  "/about": "pages/about.js"
+  "/search": "pages/search.js"
 }
