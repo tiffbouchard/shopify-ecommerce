@@ -1,6 +1,4 @@
-<center>
-<img src="./web/public/header.png" alt="ojos-header"/>
-</center>
+<img style="text-align:center" src="./web/public/header.png" alt="ojos-header"/>
 
 ## Table of Contents
 - [About](#about)
