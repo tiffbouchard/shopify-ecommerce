@@ -29,15 +29,30 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
+    "/about": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/about.js"
+    ],
     "/collections/tops": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/collections/tops.js"
     ],
-    "/products/[handle]": [
+    "/contact": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/products/[handle].js"
+      "static/chunks/pages/contact.js"
+    ],
+    "/policy": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/policy.js"
+    ],
+    "/search": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/search.js"
     ]
   },
   "ampFirstPages": []
