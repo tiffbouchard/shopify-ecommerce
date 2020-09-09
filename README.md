@@ -4,12 +4,12 @@
 
 ## Table of Contents
 - [About](#about)
+- [Learning Outcomes](#learning-outcomes)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
 - [Design Process](#design-process)
-- [Screenshots](#screenshots)
+- [Preview](#preview)
 - [Getting Started](#getting-started)
-- [Learning Outcomes](#learning-outcomes)
 - [Next Steps](#next-steps)
 
 ## About 
