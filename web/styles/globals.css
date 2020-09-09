@@ -362,19 +362,19 @@ main {
 #product-details-page {
     display: flex;
     justify-content: center;
-    margin: 50px 0;
+    margin: 0;
 }
 
 #product-details-container {
     display: flex;
     max-width: 1200px;
-    margin: 10px;
+    margin: 40px 0 60px 0;
 }
 #product-details {
     margin-left: 20px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
     #product-details-container {
         display: block;
         max-width: 1200px;

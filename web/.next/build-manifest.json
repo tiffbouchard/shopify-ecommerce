@@ -34,25 +34,20 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/about.js"
     ],
-    "/collections/tops": [
+    "/collections/bottoms": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/collections/tops.js"
+      "static/chunks/pages/collections/bottoms.js"
     ],
     "/contact": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
       "static/chunks/pages/contact.js"
     ],
-    "/policy": [
+    "/products/[handle]": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/policy.js"
-    ],
-    "/search": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/search.js"
+      "static/chunks/pages/products/[handle].js"
     ]
   },
   "ampFirstPages": []

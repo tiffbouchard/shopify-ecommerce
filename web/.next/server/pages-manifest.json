@@ -2,10 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/search": "pages/search.js",
+  "/contact": "pages/contact.js",
+  "/collections/bottoms": "pages/collections/bottoms.js",
+  "/products/[handle]": "pages/products/[handle].js",
   "/": "pages/index.js",
-  "/collections/tops": "pages/collections/tops.js",
-  "/policy": "pages/policy.js",
-  "/about": "pages/about.js",
-  "/contact": "pages/contact.js"
+  "/about": "pages/about.js"
 }
