@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { useEffect } from "react";
 
 import { ShopContext } from "../../context/shopContext";
 
@@ -13,7 +12,7 @@ import Spinner from "react-bootstrap/Spinner";
 const AllProducts = (props) => {
   const { fetchAllProducts, products } = React.useContext(ShopContext);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchAllProducts();
     return () => {};
   }, [fetchAllProducts]);

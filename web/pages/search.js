@@ -1,11 +1,7 @@
 import Head from "next/head";
 import { ShopContext } from "../context/shopContext";
 
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Spinner from "react-bootstrap/Spinner";
+import { Container, Image, Row, Col } from "react-bootstrap";
 
 const Contact = () => {
   const { searchResults, fetchBySearch } = React.useContext(ShopContext);

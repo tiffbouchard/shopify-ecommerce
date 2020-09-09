@@ -8,9 +8,7 @@ import urlFor from "../imageUrlBuilder";
 import Instagram from "../components/instagram";
 
 // Bootstrap
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container, Image } from "react-bootstrap";
 
 const Home = (props) => {
   const { images = [] } = props;
@@ -33,7 +31,7 @@ const Home = (props) => {
   });
 
   return (
-    <div>
+    <>
       <Head>
         <title>OJOS</title>
         <link rel="icon" href="/favicon.ico" />
@@ -97,7 +95,7 @@ const Home = (props) => {
         </Row>
       </Container>
       <Instagram />
-    </div>
+    </>
   );
 };
 

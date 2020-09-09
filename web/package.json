@@ -11,6 +11,7 @@
     "@sanity/client": "^1.150.1",
     "@sanity/image-url": "^0.140.19",
     "bootstrap": "^4.5.2",
+    "emailjs-com": "^2.6.3",
     "groq": "^1.150.1",
     "next": "^9.5.2",
     "next-google-fonts": "^1.2.1",

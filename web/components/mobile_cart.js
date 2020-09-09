@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { ShopContext } from "../context/shopContext";
 
 import Table from "react-bootstrap/Table";

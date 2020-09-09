@@ -2,11 +2,7 @@ import Head from "next/head";
 import { ShopContext } from "../context/shopContext";
 
 //Bootstrap
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Spinner from "react-bootstrap/Spinner";
+import { Container, Image, Row, Col, Spinner } from "react-bootstrap";
 
 const Collection = () => {
   const { collection } = React.useContext(ShopContext);

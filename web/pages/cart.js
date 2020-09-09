@@ -2,8 +2,7 @@ import Head from "next/head";
 import MobileCart from "../components/mobile_cart";
 import { ShopContext } from "../context/shopContext";
 
-import Table from "react-bootstrap/Table";
-import Spinner from "react-bootstrap/Spinner";
+import { Table, Spinner } from "react-bootstrap";
 
 const Cart = (props) => {
   const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);

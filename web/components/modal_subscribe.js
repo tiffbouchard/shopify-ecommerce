@@ -1,7 +1,4 @@
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import FormControl from "react-bootstrap/FormControl";
+import { Modal, Button, Form, FormControl } from "react-bootstrap";
 
 function SubscribeModal(props) {
   return (
@@ -62,14 +59,5 @@ function SubscribeModal(props) {
     </Modal>
   );
 }
-
-// .modal-header {
-//   border-bottom: none;
-// }
-// .modal-content {
-//   background-color: rgb(173, 223, 173);
-//   border: none;
-//   border-radius: 0px;
-// }
 
 export default SubscribeModal;

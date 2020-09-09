@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
 import { Spinner } from "react-bootstrap";
 
 function Instagram() {
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [images, setImages] = useState([]);
+  const [error, setError] = React.useState(null);
+  const [isLoaded, setIsLoaded] = React.useState(false);
+  const [images, setImages] = React.useState([]);
 
-  useEffect(() => {
-    fetch("https://www.instagram.com/is_ojos/?__a=1")
+  React.useEffect(() => {
+    fetch("https://www.instagram.com/ssense/?__a=1")
       .then((res) => res.json())
       .then(
         (result) => {

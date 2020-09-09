@@ -1,10 +1,10 @@
 import emailjs from "emailjs-com";
 
-const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-const USER_ID = process.env.REACT_APP_USER_ID;
+const SERVICE_ID = process.env.SERVICE_ID;
+const TEMPLATE_ID = process.env.TEMPLATE_ID;
+const USER_ID = process.env.USER_ID;
 
-class Form extends Component {
+class Form extends React.Component {
   state = {
     name: "",
     email: "",
@@ -22,15 +22,7 @@ class Form extends Component {
     };
 
     emailjs
-      .send("gmail", { TEMPLATE_ID }, templateParams, { SERVICE_ID })
-      .then(
-        function () {
-          alert("Email sent successfully!");
-        },
-        function (error) {
-          alert("FAILED!" + error);
-        }
-      )
+      .send("gmail", { TEMPLATE_ID }, templateParams, { USER_ID })
       .then(this.resetForm());
   };
 
@@ -39,7 +31,6 @@ class Form extends Component {
       name: "",
       email: "",
       message: "",
-      isLoading: false,
     });
   }
 
@@ -48,22 +39,17 @@ class Form extends Component {
   };
 
   render() {
-    AOS.init();
     return (
       <section className="sub-section" id="contact">
-        <FormContainer
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="100"
-        >
-          <h1>CONTACT</h1>
-          <form onSubmit={this.handleSubmit}>
+        <div>
+          <form className="contact-form" onSubmit={this.handleSubmit}>
             <input
               type="text"
               name="name"
               value={this.state.name}
               onChange={this.handleChange}
               placeholder="Name"
+              className="contact-form-input"
             />
             <input
               required
@@ -72,6 +58,7 @@ class Form extends Component {
               value={this.state.email}
               onChange={this.handleChange}
               placeholder="Email"
+              className="contact-form-input"
             />
             <textarea
               required
@@ -80,11 +67,13 @@ class Form extends Component {
               value={this.state.message}
               onChange={this.handleChange}
               placeholder="Message"
+              className="contact-form-input"
             />
-            <button type="submit">Send</button>
-            {this.state.isLoading ? "Loading..." : null}
+            <button type="submit" className="contact-form-input-button">
+              Send
+            </button>
           </form>
-        </FormContainer>
+        </div>
       </section>
     );
   }

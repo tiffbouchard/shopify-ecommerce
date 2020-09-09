@@ -1,5 +1,4 @@
-import Navbar from "react-bootstrap/Navbar";
-import Nav from "react-bootstrap/Nav";
+import { Navbar, Nav } from "react-bootstrap";
 
 import SubscribeModal from "./modal_subscribe";
 
@@ -14,7 +13,7 @@ const Footer = () => {
         <SubscribeModal show={modalShow} onHide={() => setModalShow(false)} />
       </Nav>
       <Nav>
-        <Nav.Link href="http://tiffbouchard.com">
+        <Nav.Link target="blank" href="http://tiffbouchard.com">
           ©2020 OJOS - Built & Designed by Tiffany Bouchard 🌱
         </Nav.Link>
       </Nav>

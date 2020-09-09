@@ -1,8 +1,6 @@
 import Head from "next/head";
 
-import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Container, Image } from "react-bootstrap";
 
 const About = () => {
   return (

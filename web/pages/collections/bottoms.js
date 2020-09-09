@@ -10,11 +10,7 @@ const Bottoms = (props) => {
     return () => {};
   }, [fetchCollection]);
 
-  return (
-    <div>
-      <Collection />
-    </div>
-  );
+  return <Collection />;
 };
 
 export default Bottoms;

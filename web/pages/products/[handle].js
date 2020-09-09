@@ -1,13 +1,10 @@
 import Head from "next/head";
 import { ShopContext } from "../../context/shopContext";
 
-// Sanity.io
-import client from "../../client";
-import urlFor from "../../imageUrlBuilder";
+import Instagram from "../../components/instagram";
 
 // Bootstrap
 import { Image, Spinner, Toast } from "react-bootstrap";
-import { useEffect } from "react";
 
 const ProductDetails = (props) => {
   // const [size, setSize] = React.useState();
@@ -38,7 +35,7 @@ const ProductDetails = (props) => {
   //   }
   // });
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchProductByHandle(handle);
     return () => {};
   }, [fetchProductByHandle, handle]);
@@ -58,11 +55,12 @@ const ProductDetails = (props) => {
       </div>
     );
   return (
-    <div id="product-details-page">
+    <>
       <div
         style={{
           display: "flex",
           justifyContent: "flex-end",
+          marginRight: "30px",
         }}
       >
         <Toast
@@ -77,23 +75,24 @@ const ProductDetails = (props) => {
           <Toast.Body>You added {product.title} to your cart!</Toast.Body>
         </Toast>
       </div>
-      <Head>
-        <title>OJOS | {product.title}</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div id="product-details-container">
-        <div id="product-image">
-          <Image className="products" src={product.images[0].src} />
-        </div>
-        <div id="product-details">
-          <h1>{product.title}</h1>
-          <p>
-            {product.availableForSale
-              ? "$" + product.variants[0].price
-              : "Sold out"}
-          </p>
-          {/* Leave in in case sizes need to be implemented */}
-          {/* <select id="size-select" onChange={handleChange}>
+      <div id="product-details-page">
+        <Head>
+          <title>OJOS | {product.title}</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>{" "}
+        <div id="product-details-container">
+          <div id="product-image">
+            <Image src={product.images[0].src} />
+          </div>
+          <div id="product-details">
+            <h1>{product.title}</h1>
+            <p>
+              {product.availableForSale
+                ? "$" + product.variants[0].price
+                : "Sold out"}
+            </p>
+            {/* Leave in in case sizes need to be implemented */}
+            {/* <select id="size-select" onChange={handleChange}>
             <option key="null">Select Size</option>
             {sizes &&
               sizes.map((size) => <option value={size} key={size}></option>)}
@@ -104,47 +103,51 @@ const ProductDetails = (props) => {
                 </button>
           ) : (
           )} */}
-          {product.availableForSale ? (
-            <button
-              className="add-to-cart-btn"
-              onClick={() => {
-                addItemToCheckout(product.variants[0].id, 1);
-                setShow(true);
-              }}
-            >
-              Add to Cart
-            </button>
-          ) : (
-            <button
-              disabled
-              className="add-to-cart-btn"
-              onClick={() => {
-                addItemToCheckout(product.variants[0].id, 1);
-                setShow(true);
-              }}
-            >
-              Add to Cart
-            </button>
-          )}
-          <h4>Description</h4>
-          <p>{product.description}</p>
-          <h4>Sizing</h4>
-          <p>
-            Complimentary ground shipping on all domestic orders. Returns
-            accepted within 7 days of delivery on full price items. All sale
-            items and masks are final sale. International shipping available to
-            select countries.
-          </p>
-          <h4>Shipping</h4>
-          <p>
-            Complimentary ground shipping on all domestic orders. Returns
-            accepted within 7 days of delivery on full price items. All sale
-            items and masks are final sale. International shipping available to
-            select countries.
-          </p>
+            {product.availableForSale ? (
+              <button
+                className="add-to-cart-btn"
+                onClick={() => {
+                  addItemToCheckout(product.variants[0].id, 1);
+                  setShow(true);
+                }}
+              >
+                Add to Cart
+              </button>
+            ) : (
+              <button
+                disabled
+                className="add-to-cart-btn"
+                onClick={() => {
+                  addItemToCheckout(product.variants[0].id, 1);
+                  setShow(true);
+                }}
+              >
+                Add to Cart
+              </button>
+            )}
+            <div id="product-info">
+              <h4>Description</h4>
+              <p>{product.description}</p>
+              <h4>Sizing</h4>
+              <p>
+                Complimentary ground shipping on all domestic orders. Returns
+                accepted within 7 days of delivery on full price items. All sale
+                items and masks are final sale. International shipping available
+                to select countries.
+              </p>
+              <h4>Shipping</h4>
+              <p>
+                Complimentary ground shipping on all domestic orders. Returns
+                accepted within 7 days of delivery on full price items. All sale
+                items and masks are final sale. International shipping available
+                to select countries.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <Instagram />
+    </>
   );
 };
 
