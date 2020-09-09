@@ -154,11 +154,11 @@ main {
     padding: 10px;
     margin: 10px;
     border: none;
-    background-color: #addfad;
+    background-color: #c4dbc8;
 }
 .contact-form-input-button:hover {
     transition: 1s ease-in-out;
-    background-color:#a4d1a4;
+    background-color:rgb(150, 192, 150);
 }
   /* Shop Policy Page */
 .policy-container {
@@ -203,14 +203,14 @@ main {
     max-width: 100px;
 }
 .add-to-cart-btn {
-    background-color: #addfad;
+    background-color: #c4dbc8;
     border: none;
     padding: 10px;
     margin-bottom: 10px;
 }
 .add-to-cart-btn:hover {
     transition: 0.5s ease-in-out;
-    background-color: #a4d1a4;
+    background-color: rgb(150, 192, 150);
 }
 
 @media only screen and (min-width: 200px) and (max-width: 700px) {
@@ -276,7 +276,7 @@ main {
 }
 .navigation > div a:hover {
     text-decoration: none;
-    color: #addfad;
+    color: #c4dbc8;
 }
 .navigation > div button {
     background-color: transparent;
@@ -287,7 +287,7 @@ main {
 }
 .navigation > div button:hover {
     text-decoration: none;
-    color: #addfad;
+    color: rgb(150, 192, 150);
 }
 .navigation > div button:focus {
     outline: none;
@@ -304,7 +304,7 @@ main {
 }
 .dropdown-nav-hover >  a:hover {
     text-decoration: none;
-    color: #addfad;
+    color: rgb(150, 192, 150);
 }
 .dropdown-nav-hover {
     display: flex;
@@ -342,10 +342,10 @@ main {
     padding: 10px;
     margin: 10px;
     border: none;
-    background-color: #addfad;
+    background-color: #c4dbc8;
 }
 .search-form-input-button:hover {
-    background-color: #a4d1a4;
+    background-color: rgb(150, 192, 150);
 }
 /* Loading spinnners */
 .ig-spinner {

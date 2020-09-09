@@ -17,14 +17,14 @@ function SubscribeModal(props) {
         closeButton
         style={{
           borderBottom: "none",
-          backgroundColor: "rgb(173, 223, 173)",
+          backgroundColor: "#c4dbc8",
           border: "none",
           borderRadius: "0",
         }}
       />
       <Modal.Body
         style={{
-          backgroundColor: "rgb(173, 223, 173)",
+          backgroundColor: "#c4dbc8",
           height: "180px",
         }}
       >
@@ -35,7 +35,7 @@ function SubscribeModal(props) {
             placeholder="Email"
             style={{
               borderBottom: "none",
-              backgroundColor: "rgb(173, 223, 173)",
+              backgroundColor: "#c4dbc8",
               border: "1px solid black",
               borderRadius: "0px",
               width: "50%",
@@ -44,7 +44,7 @@ function SubscribeModal(props) {
           <Button
             style={{
               borderBottom: "none",
-              backgroundColor: "rgb(173, 223, 173)",
+              backgroundColor: "#c4dbc8",
               border: "1px solid black",
               borderRadius: "0px",
               color: "black",
