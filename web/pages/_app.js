@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import "bootstrap/dist/css/bootstrap.css";
 import ShopProvider from "../context/shopContext";
 import Layout from "../components/layout";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function MyApp({ Component, pageProps }) {
   return (

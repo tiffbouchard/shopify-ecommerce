@@ -3,6 +3,8 @@ import { ShopContext } from "../../context/shopContext";
 
 import Instagram from "../../components/instagram";
 
+import { Carousel } from "react-responsive-carousel";
+
 // Bootstrap
 import { Image, Spinner, Toast } from "react-bootstrap";
 
@@ -79,10 +81,25 @@ const ProductDetails = (props) => {
         <Head>
           <title>OJOS | {product.title}</title>
           <link rel="icon" href="/favicon.ico" />
-        </Head>{" "}
+        </Head>
         <div id="product-details-container">
           <div id="product-image">
-            <Image src={product.images[0].src} />
+            {product.images.map((image) => (
+              <Carousel>
+                <div>
+                  <img alt="" src={image.src} />
+                </div>
+                <div>
+                  <img alt="" src={image.src} />
+                </div>
+                <div>
+                  <img alt="" src={image.src} />
+                </div>
+                <div>
+                  <img alt="" src={image.src} />
+                </div>
+              </Carousel>
+            ))}
           </div>
           <div id="product-details">
             <h1>{product.title}</h1>
