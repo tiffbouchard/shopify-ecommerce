@@ -2,6 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/products/[handle]": "pages/products/[handle].js",
-  "/collections/accessories": "pages/collections/accessories.js"
+  "/about": "pages/about.js",
+  "/search": "pages/search.js",
+  "/policy": "pages/policy.js",
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/": "pages/index.js"
 }

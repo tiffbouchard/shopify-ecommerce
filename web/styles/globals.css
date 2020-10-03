@@ -167,6 +167,7 @@ main {
 .policy-body {
     max-width: 900px;
     text-align: center;
+    margin: 5px 0px;
 }
   /* Shopping Cart */
 .cart-delete-btn {

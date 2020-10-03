@@ -1,8 +1,21 @@
 import Head from "next/head";
 
+import client from "../client";
+import urlFor from "../imageUrlBuilder";
+
 import { Row, Col, Container, Image } from "react-bootstrap";
 
-const About = () => {
+const About = (props) => {
+  const { sections = [] } = props;
+
+  const sectionOne = sections.filter((section) => {
+    return section.title === "Section One";
+  });
+
+  const sectionTwo = sections.filter((section) => {
+    return section.title === "Section Two";
+  });
+
   return (
     <div>
       <Head>
@@ -16,44 +29,27 @@ const About = () => {
             <div className="about-image-one">
               <Image
                 fluid
-                src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/IMG_6049_1200x.jpg?v=1596433120"
+                src={urlFor(sectionOne[0].image).quality(100).url()}
               />
             </div>
           </Col>
           <Col xs={12} sm={12} md={6}>
             <div className="about-paragraph">
-              <p>
-                Loremssss ipsum dolor sit amet, consectetur adipiscing elit, sed
-                do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-                dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est
-                laborum.
-              </p>
+              <p>{sectionOne[0].description}</p>
             </div>
           </Col>
         </Row>
         <Row>
           <Col xs={12} sm={12} md={6}>
             <div className="about-paragraph">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p>{sectionTwo[0].description}</p>
             </div>
           </Col>
           <Col xs={12} sm={12} md={6}>
             <div className="about-image-two">
               <Image
                 fluid
-                src="https://cdn.shopify.com/s/files/1/0021/9919/1618/files/KKCO-9_1200x.jpg?v=1595571332"
+                src={urlFor(sectionTwo[0].image).quality(100).url()}
               />
             </div>
           </Col>
@@ -62,5 +58,12 @@ const About = () => {
     </div>
   );
 };
+
+// Fetching data from Sanity.io with GROQ query
+About.getInitialProps = async () => ({
+  sections: await client.fetch(`
+  *[_type == "about"]{description, image, title}
+  `),
+});
 
 export default About;
