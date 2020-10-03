@@ -61,14 +61,13 @@ Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can f
 - Connect Sanity and Shopify to sync product data with webhooks in order to provide seamless management of products for client (not sure how to do this, but will find out)
 - Create a function to see if an item is already in the cart, if so disable button and show message saying the item is already in your cart (since there is only a quantity of one per product)
 - Add ability to view how many things are in the cart for better UX (right now just have a toast everytime a visitor adds an item to their cart)
-- ~~Search page~~
+- ~~Search page~~ (Sept 3, 2020)
 - Add ability to click outside of the dropdown to trigger dropdown close for better UX 
 - Newsletter with Mailchimp
 - Contact + custom orders form with EmailJS
 - Reorganize CSS (possibly transfer to styled components) + understand better project structure for Next.js + organization
 - Remove all hardcoded info and transfer to Sanity CMS to allow client flexibility of updating content (Policy and About pages)
 - Add better accessibility, only on certain elements now
-- Add ability to filter on pages - Newest etc. Price low-high 
-- Ability to display multiple photos of details page in a carousel 
+- ~~Ability to display multiple photos of details page in a carousel~~ (Sept 24, 2020)
 
 ![https://vercel.com](https://res.cloudinary.com/anuraghazra/image/upload/v1597827714/powered-by-vercel_1_ug4uro.svg)
