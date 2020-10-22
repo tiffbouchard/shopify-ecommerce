@@ -36,7 +36,7 @@ During the process of designing and building this project, I learned...
 - Mailchimp & EmailJS
 
 ## Design
--[Figma wireframes & prototypes](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
+[Figma wireframes & prototypes](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
 ## Preview
 
@@ -50,7 +50,7 @@ During the process of designing and building this project, I learned...
 <img src="./web/public/gifs/search.gif" alt="search-gif"/>
 
 ## Getting Started 
-Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can find it [here]()
+Click [here](https://ojos.vercel.app) for a demo
 
 ## Next Steps
 - Connect Sanity and Shopify to sync product data with webhooks in order to provide seamless management of products for client (not sure how to do this, but will find out)
