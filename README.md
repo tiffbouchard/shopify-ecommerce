@@ -5,7 +5,7 @@
 - [Learning Outcomes](#learning-outcomes)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Design Process](#design-process)
+- [Design](#design)
 - [Preview](#preview)
 - [Getting Started](#getting-started)
 - [Next Steps](#next-steps)
@@ -14,9 +14,8 @@
 OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials.  
 
 ## Learning Outcomes
-During the process of designing and building this project, I learned...
-  - React context hooks in order to share state among components rather than prop drilling
-  - Using Next.js for server side rendering and built in API routes 
+- React context hooks in order to share state among components rather than prop drilling
+- Using Next.js for server side rendering and built in API routes 
 
 ## Features
 - The owner is able to update content/products from Sanity and Shopify admin dashboard for easier management and giving more independence to the owner, also gives the ability to scale if need be 
