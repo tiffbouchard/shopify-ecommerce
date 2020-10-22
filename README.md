@@ -13,8 +13,6 @@
 ## About 
 OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials.  
 
-> OJOS is currently preparing for product drops and public release and all site content is currently placeholder 
-
 ## Learning Outcomes
 During the process of designing and building this project, I learned...
   - React context hooks in order to share state among components rather than prop drilling
