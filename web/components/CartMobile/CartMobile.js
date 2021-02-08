@@ -10,7 +10,7 @@ const MobileCart = (props) => {
       <div className="cart-wrapper">
         <Table className="cart-mobile">
           <tbody>
-            {checkout.lineItems &&
+            {checkout && checkout.lineItems &&
               checkout.lineItems.map((item) => (
                 <tr>
                   <td scope="row">
@@ -33,11 +33,11 @@ const MobileCart = (props) => {
               ))}
             <tr>
               <td></td>
-              <td>Subtotal: ${checkout.totalPrice}</td>
+              <td>Subtotal: ${checkout && checkout.totalPrice}</td>
             </tr>
           </tbody>
         </Table>
-        <a href={checkout.webUrl} target="_blank">
+        <a href={checkout && checkout.webUrl} target="_blank">
           <button className="cart-checkout-btn-mobile">Checkout</button>
         </a>
       </div>

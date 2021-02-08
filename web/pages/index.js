@@ -4,6 +4,7 @@ import Head from "next/head";
 import { Row, Col, Container, Image } from "react-bootstrap";
 
 import Instagram from "../components/Instagram/Instagram";
+import ProductCarousel from "../components/ProductCarousel/ProductCarousel"
 // Sanity.io
 import client from "../client";
 import urlFor from "../imageUrlBuilder";
@@ -63,6 +64,9 @@ const Home = (props) => {
               </a>
             </div>
           </Col>
+        </Row>
+        <Row>
+          <ProductCarousel/>
         </Row>
         <Row>
           <Col xs={12} sm={12} md={6}>

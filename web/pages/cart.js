@@ -6,8 +6,9 @@ import { Table, Spinner } from "react-bootstrap";
 
 const Cart = (props) => {
   const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
+  console.log(checkout)
 
-  if (!checkout.lineItems)
+  if (checkout && !checkout.lineItems)
     return (
       <div className="page-spinner">
         <Spinner animation="border" role="status">
@@ -15,7 +16,7 @@ const Cart = (props) => {
         </Spinner>
       </div>
     );
-  else if (checkout.lineItems && checkout.lineItems.length < 1)
+  else if (checkout && checkout.lineItems.length < 1)
     return (
       <div>
         <Head>
@@ -46,7 +47,7 @@ const Cart = (props) => {
             </tr>
           </thead>
           <tbody>
-            {checkout.lineItems.length &&
+            {checkout && checkout.lineItems.length &&
               checkout.lineItems.map((item) => (
                 <tr>
                   <td scope="row">
@@ -69,14 +70,14 @@ const Cart = (props) => {
               <td scope="row"></td>
               <td></td>
               <td>Subtotal</td>
-              <td>${checkout.totalPrice}</td>
+              <td>${checkout && checkout.totalPrice}</td>
             </tr>
             <tr>
               <td scope="row"></td>
               <td></td>
               <td></td>
               <td>
-                <a href={checkout.webUrl} target="_blank">
+                <a href={checkout && checkout.webUrl} target="_blank">
                   <button className="cart-checkout-btn">Checkout</button>
                 </a>
               </td>
