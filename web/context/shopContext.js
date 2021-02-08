@@ -3,8 +3,8 @@ import Client from "shopify-buy";
 const ShopContext = React.createContext();
 
 const client = Client.buildClient({
-  domain: "ojos-store.myshopify.com",
-  storefrontAccessToken: "e52f8498c6bb5dea9c7c6670860b7224",
+  domain: "ojos-shop.myshopify.com",
+  storefrontAccessToken: "a5486d87a0b9c4738c23a0abe8fb56d2",
 });
 
 class ShopProvider extends React.Component {

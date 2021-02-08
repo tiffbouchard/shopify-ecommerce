@@ -1,5 +1,5 @@
 import Head from "next/head";
-import MobileCart from "../components/mobile_cart";
+import MobileCart from "../components/CartMobile/CartMobile";
 import { ShopContext } from "../context/shopContext";
 
 import { Table, Spinner } from "react-bootstrap";

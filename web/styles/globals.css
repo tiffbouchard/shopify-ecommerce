@@ -264,7 +264,7 @@ main {
     background-color: rgb(255, 255, 255);
     height: 60px;
     width: 100%;
-    padding: 0 20px;
+    padding: 50px 20px;
 }
 .navigation > div a {
     cursor: pointer;
@@ -290,7 +290,7 @@ main {
     outline: none;
 }
 #nav-header {
-    font-size: 50px;
+    font-size: 80px;
 }
 .dropdown-nav {
     display: none;
@@ -300,8 +300,8 @@ main {
     padding: 10px;
 }
 .dropdown-nav-hover >  a:hover {
-    text-decoration: none;
-    color: rgb(150, 192, 150);
+    text-decoration: underline;
+    color: black;
 }
 .dropdown-nav-hover {
     display: flex;
@@ -310,7 +310,7 @@ main {
     justify-content: flex-start;
     align-items: center ;
     flex-wrap: wrap;
-    top: 60px;
+    top: 100px;
     right: 0;
     left: 0;
     background-color: rgba(255, 255, 255, 0.5);

@@ -1,14 +1,13 @@
 import Head from "next/head";
 
+// Bootstrap
+import { Row, Col, Container, Image } from "react-bootstrap";
+
+import Instagram from "../components/Instagram/Instagram";
 // Sanity.io
 import client from "../client";
 import urlFor from "../imageUrlBuilder";
 
-// Custom components
-import Instagram from "../components/instagram";
-
-// Bootstrap
-import { Row, Col, Container, Image } from "react-bootstrap";
 
 const Home = (props) => {
   const { images = [] } = props;

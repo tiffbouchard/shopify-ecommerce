@@ -1,7 +1,8 @@
 import Head from "next/head";
-import { ShopContext } from "../context/shopContext";
 
 import { Container, Image, Row, Col } from "react-bootstrap";
+
+import { ShopContext } from "../context/shopContext";
 
 const Contact = () => {
   const { searchResults, fetchBySearch } = React.useContext(ShopContext);

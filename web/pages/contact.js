@@ -1,5 +1,5 @@
 import Head from "next/head";
-import ContactForm from "../components/contact_form";
+import ContactForm from "../components/ContactForm/ContactForm";
 
 const Contact = () => {
   return (

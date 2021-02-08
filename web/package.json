@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.21",
     "@sanity/client": "^1.150.1",
     "@sanity/image-url": "^0.140.19",
     "bootstrap": "^4.5.2",

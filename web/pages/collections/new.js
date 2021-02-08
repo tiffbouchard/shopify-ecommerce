@@ -1,5 +1,5 @@
 import { ShopContext } from "../../context/shopContext";
-import Collection from "../../components/collection";
+import Collection from "../../components/Collection/Collection";
 
 const New = (props) => {
   const { fetchCollection } = React.useContext(ShopContext);
