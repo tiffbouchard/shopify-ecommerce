@@ -1,0 +1,42 @@
+.header {
+    border-bottom: none;
+    background-color: #c4dbc8;
+    border: none;
+    border-radius: 0;
+}
+
+.body {
+    background-color: #c4dbc8;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.input {
+    border-bottom: none;
+    background-color: #c4dbc8;
+    border: 1px solid black;
+    border-radius: 0px;
+    width: 50%;
+    margin-right: 10px;
+    box-shadow: 5px 5px black;
+    padding: 0px 15px;
+}
+
+.button {
+    border-bottom: none;
+    background-color: #c4dbc8;
+    border: 1px solid black;
+    border-radius: 0px;
+    color: black;
+    padding: 10px;
+    box-shadow: 5px 5px black;
+}

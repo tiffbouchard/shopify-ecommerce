@@ -1,15 +1,14 @@
 import { Spinner } from "react-bootstrap";
 
+import styles from "./Instagram.module.css";
+
 function Instagram() {
   const [error, setError] = React.useState(null);
   const [isLoaded, setIsLoaded] = React.useState(false);
   const [images, setImages] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://www.instagram.com/ssense/?__a=1", {
-      mode: 'cors', // no-cors, *cors, same-origin
-      cache: 'no-cache',
-    })
+    fetch("https://www.instagram.com/tiffbouchard/?__a=1")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -35,7 +34,7 @@ function Instagram() {
     );
   } else {
     return (
-      <div className="instagram-feed">
+      <div className={styles.igFeed}>
         {images.slice(0, 6).map((image) => (
           <a
             href={"http://instagram.com/p/" + image.node.shortcode}

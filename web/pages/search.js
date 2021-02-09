@@ -3,6 +3,7 @@ import Head from "next/head";
 import { Container, Image, Row, Col } from "react-bootstrap";
 
 import { ShopContext } from "../context/shopContext";
+import Product from "../components/Product/Product";
 
 const Contact = () => {
   const { searchResults, fetchBySearch } = React.useContext(ShopContext);
@@ -41,28 +42,7 @@ const Contact = () => {
           {searchResults.length ? (
             searchResults.map((result) => (
               <Col xs={12} sm={6} md={6} lg={4} key={result.id}>
-                <div className="product-section">
-                  <a href={`/products/${result.handle}`}>
-                    <Image
-                      className="products"
-                      fluid
-                      src={result.images[0].src}
-                    />
-                  </a>
-                </div>
-                <div className="product-description">
-                  <a
-                    href={`/products/${result.handle}`}
-                    className="product-name"
-                  >
-                    {result.title}
-                  </a>
-                  <a href="/products/:id" className="product-price">
-                    {result.availableForSale
-                      ? "$" + result.variants[0].price
-                      : "Sold out"}
-                  </a>
-                </div>
+                <Product product={result}/>
               </Col>
             ))
           ) : (

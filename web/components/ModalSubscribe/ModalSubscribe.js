@@ -40,27 +40,15 @@ function ModalSubscribe(props) {
       size="xl"
       aria-labelledby="contained-modal-title-vcenter"
       centered
-      style={{
-        border: "0px",
-        borderRadius: "0px",
-        backgroundClip: "none",
-      }}
+      className={styles.wrapper}
     >
       <Modal.Header
         closeButton
         onClick={closeButtonClicked}
-        style={{
-          borderBottom: "none",
-          backgroundColor: "#c4dbc8",
-          border: "none",
-          borderRadius: "0",
-        }}
+        className={styles.header}
       />
       <Modal.Body
-        style={{
-          backgroundColor: "#c4dbc8",
-          height: "180px",
-        }}
+        className={styles.body}
       >
         <h4>
           {message
@@ -68,34 +56,21 @@ function ModalSubscribe(props) {
             : `Join the list for exclusive details on products and releases`}
         </h4>
 
-        <Form className="subscribe-form" onSubmit={subscribe} inline>
-          <FormControl
+        <form className={styles.form} onSubmit={subscribe} inline>
+          <input
             type="email"
             placeholder="Email"
             name="email"
             ref={input}
-            style={{
-              borderBottom: "none",
-              backgroundColor: "#c4dbc8",
-              border: "1px solid black",
-              borderRadius: "0px",
-              width: "50%",
-            }}
+            className={styles.input}
           />
-          <Button
-            style={{
-              borderBottom: "none",
-              backgroundColor: "#c4dbc8",
-              border: "1px solid black",
-              borderRadius: "0px",
-              color: "black",
-              margin: "5px",
-            }}
+          <button
+            className={styles.button}
             type="submit"
           >
             Subscribe
-          </Button>
-        </Form>
+          </button>
+        </form>
       </Modal.Body>
     </Modal>
   );

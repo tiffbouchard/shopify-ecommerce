@@ -2,6 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/collections/tops": "pages/collections/tops.js",
-  "/products/[handle]": "pages/products/[handle].js"
+  "/": "pages/index.js",
+  "/products/[handle]": "pages/products/[handle].js",
+  "/search": "pages/search.js",
+  "/collections/tops": "pages/collections/tops.js"
 }

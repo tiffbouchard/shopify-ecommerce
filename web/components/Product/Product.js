@@ -1,22 +1,23 @@
+import styles from "./Product.module.css";
+
 const Product = ({product}) => {
     return (
       <div>
-        <div className="product-section">
+        <div className={styles.imgWrapper}>
         <a href={`/products/${product.handle}`}>
           <img
-            className="products"
             src={product.images[0].src}
           />
         </a>
       </div>
-      <div className="product-description">
+      <div className={styles.description}>
         <a
           href={`/products/${product.handle}`}
-          className="product-name"
+          className={styles.name}
         >
           {product.title}
         </a>
-        <a href={`/products/${product.handle}`} className="product-price">
+        <a href={`/products/${product.handle}`} className={styles.price}>
           {product.availableForSale
             ? "$" + product.variants[0].price
             : "Sold out"}

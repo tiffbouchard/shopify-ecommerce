@@ -21,7 +21,7 @@ const Collection = () => {
     return (
       <div>
         <h1 className="page-title">{collection.title}</h1>
-        <div className="no-results-msg">
+        <div className="no-products-msg">
           <p>No products right now, check back later!</p>
         </div>
       </div>
@@ -36,7 +36,7 @@ const Collection = () => {
       <Container fluid="lg">
         <Row>
           {collection.products.map((product) => (
-            <Col xs={12} sm={6} md={6} lg={4} key={product.id}>
+            <Col xs={12} sm={6} md={6} lg={4} key={product.id} className={styles.productCard}>
               <Product product={product}/>
             </Col>
           ))}

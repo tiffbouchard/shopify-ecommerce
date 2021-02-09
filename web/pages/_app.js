@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/styles.css";
 import "bootstrap/dist/css/bootstrap.css";
 import ShopProvider from "../context/shopContext";
 import Layout from "../components/Layout";

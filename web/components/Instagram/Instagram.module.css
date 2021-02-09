@@ -1,0 +1,12 @@
+.igFeed {
+    margin: 20px 0;
+    display: flex;
+}
+.igFeed a > img {
+    width: 100%;
+    height: auto;
+}
+.igFeed a > img:hover {
+    transition: 0.5s;
+    opacity: 0.8;
+}

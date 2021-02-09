@@ -68,6 +68,7 @@ const Home = (props) => {
         <Row className="justify-content-center mt-5 mb-5">
           <h2 className="mb-3">New Arrivals</h2>
           <ProductCarousel/>
+          <button className="index-button">SHOP ALL NEW ARRIVALS</button>
         </Row>
         <Row>
           <Col xs={12} sm={12} md={6}>
