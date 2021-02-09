@@ -186,6 +186,18 @@ main {
     padding: 10px;
 }
 
+.add-to-cart-btn {
+    background-color: #c4dbc8;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.add-to-cart-btn:hover {
+    transition: 0.5s ease-in-out;
+    background-color: rgb(150, 192, 150);
+}
+
+
 .product-form {
     display: flex;
     flex-direction: column;
@@ -193,84 +205,13 @@ main {
     justify-content: center;
     align-items: center;
 }
-.no-products-msg, .no-results-msg {
+.no-results-msg {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-  /* Navigation and Dropdown */
-.navigation {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center ;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: rgb(255, 255, 255);
-    height: 60px;
-    width: 100%;
-    padding: 50px 20px;
-}
-.navigation > div a {
-    cursor: pointer;
-    color: black;
-    padding: 10px;
-}
-.navigation > div a:hover {
-    text-decoration: none;
-    color: #c4dbc8;
-}
-.navigation > div button {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    color: black;
-    padding: 10px;
-}
-.navigation > div button:hover {
-    text-decoration: none;
-    color: rgb(150, 192, 150);
-}
-.navigation > div button:focus {
-    outline: none;
-}
-#nav-header {
-    font-size: 80px;
-}
-.dropdown-nav {
-    display: none;
-}
-.dropdown-nav-hover >  a {
-    color: black;
-    padding: 10px;
-}
-.dropdown-nav-hover >  a:hover {
-    text-decoration: underline;
-    color: black;
-}
-.dropdown-nav-hover {
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    justify-content: flex-start;
-    align-items: center ;
-    flex-wrap: wrap;
-    top: 100px;
-    right: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    height: 60px;
-    width: 100%;
-    padding: 0 20px;
-}
-@media only screen and (max-width: 420px) {
-    .dropdown-nav-hover {
-        height: 90px;
-    }
-}
+
   /* Search Form */
 .search-form {
     display: flex;

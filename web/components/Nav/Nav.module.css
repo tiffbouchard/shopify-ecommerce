@@ -1,0 +1,69 @@
+.navigation {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    height: 60px;
+    width: 100%;
+    padding: 50px 20px;
+}
+
+.navigation > div a {
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+}
+
+.navigation > div a:hover {
+    text-decoration: none;
+    color: #c4dbc8;
+}
+
+.navigation > div button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+}
+
+.navigation > div button:hover {
+    text-decoration: none;
+    color: rgb(150, 192, 150);
+}
+
+.navigation > div button:focus {
+    outline: none;
+}
+
+.navLeft {
+    display: flex;
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 1;
+    padding: 10px 20px;
+}
+
+.dropdownContent >  a:hover {
+    text-decoration: underline;
+    color: black;
+}
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}
+
+#navHeader {
+    font-size: 80px;
+}

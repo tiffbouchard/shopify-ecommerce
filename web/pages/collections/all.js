@@ -62,7 +62,7 @@ const AllProducts = (props) => {
               </Col>
             ))
           ) : (
-            <div className="no-products-msg">
+            <div className="no-results-msg">
               <p>No products right now, check back later!</p>
             </div>
           )}

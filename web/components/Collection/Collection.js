@@ -3,7 +3,8 @@ import Head from "next/head";
 import { Container, Row, Col, Spinner } from "react-bootstrap";
 
 import { ShopContext } from "../../context/shopContext";
-import Product from "../Product/Product"
+import Product from "../Product/Product";
+import styles from "./Collection.module.css";
 
 const Collection = () => {
   const { collection } = React.useContext(ShopContext);
@@ -20,7 +21,7 @@ const Collection = () => {
     return (
       <div>
         <h1 className="page-title">{collection.title}</h1>
-        <div className="no-products-msg">
+        <div className="no-results-msg">
           <p>No products right now, check back later!</p>
         </div>
       </div>

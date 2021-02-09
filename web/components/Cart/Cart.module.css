@@ -27,16 +27,6 @@
 .image {
     max-width: 100px;
 }
-.add-to-cart-btn {
-    background-color: #c4dbc8;
-    border: none;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-.add-to-cart-btn:hover {
-    transition: 0.5s ease-in-out;
-    background-color: rgb(150, 192, 150);
-}
 
 @media only screen and (min-width: 200px) and (max-width: 700px) {
     .table {

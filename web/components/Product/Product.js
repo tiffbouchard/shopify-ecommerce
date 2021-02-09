@@ -1,13 +1,10 @@
-import { Image } from "react-bootstrap";
-
 const Product = ({product}) => {
     return (
       <div>
         <div className="product-section">
         <a href={`/products/${product.handle}`}>
-          <Image
+          <img
             className="products"
-            fluid
             src={product.images[0].src}
           />
         </a>

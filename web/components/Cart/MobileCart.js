@@ -6,7 +6,7 @@ import styles from "./Cart.module.css";
 const MobileCart = (props) => {
   const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
 
-  return (t
+  return (
   <div className={styles.wrapper}>
     <Table className={styles.mobile}>
       <tbody>
