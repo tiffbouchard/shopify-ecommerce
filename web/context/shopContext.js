@@ -13,7 +13,6 @@ class ShopProvider extends React.Component {
     products: [],
     product: {},
     checkout: {},
-    // checkoutTotal: 0,
     searchResults: [],
   };
 
@@ -28,13 +27,7 @@ class ShopProvider extends React.Component {
       this.setState({ checkoutTotal: checkoutTotal });
     }
   }
-
-  createCheckout = async () => {
-    const checkout = await client.checkout.create();
-    localStorage.setItem("checkout", checkout.id);
-    this.setState({ checkout: checkout });
-  };
-
+  
   fetchCheckout = async (checkoutId) => {
     client.checkout
       .fetch(checkoutId)
@@ -43,6 +36,13 @@ class ShopProvider extends React.Component {
       })
       .catch((err) => console.log(err));
   };
+
+  createCheckout = async () => {
+    const checkout = await client.checkout.create();
+    localStorage.setItem("checkout", checkout.id);
+    this.setState({ checkout: checkout });
+  };
+
 
   addItemToCheckout = async (variantId, quantity) => {
     const lineItemsToAdd = [
@@ -109,15 +109,6 @@ class ShopProvider extends React.Component {
     this.setState({ searchResults: searchResults });
     console.log(searchResults);
   };
-
-  // checkIfItemInCart = async (checkout, itemId) => {
-  //   const currentCheckout = checkout;
-  //   for (item in currentCheckout.lineItems) {
-  //     if (item.id === itemId) {
-  //       this.setState({ itemInCart: true });
-  //     }
-  //   }
-  // };
 
   render() {
     return (

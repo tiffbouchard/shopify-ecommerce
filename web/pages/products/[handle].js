@@ -9,12 +9,6 @@ import { Carousel } from "react-responsive-carousel";
 import { Image, Spinner, Toast } from "react-bootstrap";
 
 const ProductDetails = (props) => {
-  // const [size, setSize] = React.useState();
-
-  // const handleChange = (event) => {
-  //   setSize(event.target.value);
-  // };
-
   const [show, setShow] = React.useState(false);
 
   let handle = props.params.handle;
@@ -25,28 +19,10 @@ const ProductDetails = (props) => {
     product,
   } = React.useContext(ShopContext);
 
-  // const checkIfItemInCart = async () => {
-  //   console.log(checkout);
-  // };
-  // console.log(checkout.lineItems);
-  // const currentCheckoutItems = await checkout.lineItems;
-  // currentCheckoutItems.forEach((item) => {
-  //   if (item.id === id) {
-  //     console.log("in cart!");
-  //     // this.setState({ itemInCart: true });
-  //   }
-  // });
-
   React.useEffect(() => {
     fetchProductByHandle(handle);
     return () => {};
   }, [fetchProductByHandle, handle]);
-
-  // useEffect(() => {
-  //   fetchCheckout(checkout.id);
-  //   // checkIfItemInCart();
-  //   return () => {};
-  // }, [fetchCheckout]);
 
   if (!product.title)
     return (
@@ -68,6 +44,7 @@ const ProductDetails = (props) => {
         <Toast
           style={{
             position: "fixed",
+            zIndex: 10,
           }}
           show={show}
           delay={3000}
@@ -86,8 +63,8 @@ const ProductDetails = (props) => {
           <div id="product-image">
             <Carousel>
             {product.images.map((image) => (
-                <div>
-                  <img alt="" src={image.src} />
+                <div >
+                  <img alt="product-image" src={image.src} />
                 </div>
             ))}
             </Carousel>
@@ -99,18 +76,6 @@ const ProductDetails = (props) => {
                 ? "$" + product.variants[0].price
                 : "Sold out"}
             </p>
-            {/* Leave in in case sizes need to be implemented */}
-            {/* <select id="size-select" onChange={handleChange}>
-            <option key="null">Select Size</option>
-            {sizes &&
-              sizes.map((size) => <option value={size} key={size}></option>)}
-              </select>
-              {size === undefined || size === "Select Size" ? (
-                <button disabled className="add-to-cart-btn">
-                Add to Cart
-                </button>
-          ) : (
-          )} */}
             {product.availableForSale ? (
               <button
                 className="add-to-cart-btn"

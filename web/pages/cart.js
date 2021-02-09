@@ -3,13 +3,13 @@ import MobileCart from "../components/Cart/MobileCart";
 import DesktopCart from "../components/Cart/DesktopCart";
 import { ShopContext } from "../context/shopContext";
 
-import { Table, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 
 const Cart = (props) => {
-  const { checkout, removeItemFromCheckout } = React.useContext(ShopContext);
+  const { checkout } = React.useContext(ShopContext);
   console.log(checkout)
 
-  if (checkout && !checkout.lineItems)
+  if (!checkout.lineItems)
     return (
       <div className="page-spinner">
         <Spinner animation="border" role="status">
@@ -25,8 +25,8 @@ const Cart = (props) => {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <h1 className="page-title">Cart</h1>
-        <div className="cart-wrapper">
-          <div>Your cart is empty!</div>
+        <div className="d-flex justify-content-center">
+          <div>Your cart is empty! Fill it with some goodies ☺</div>
         </div>
       </div>
     );

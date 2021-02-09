@@ -1,5 +1,4 @@
 export default async (req, res) => {
-  // 1. Destructure the email address from the request body.
   const { email } = req.body;
 
   if (!email) {

@@ -15,8 +15,12 @@
 
 main {
     min-height: 92vh;
-    margin-top: 63px;
+    margin-top: 130px;
     width: 100%;
+}
+
+button {
+    border: none;
 }
 
 /* Titles for every page */
@@ -102,6 +106,19 @@ main {
     box-shadow: 10px 5px black;
 }
 
+.index-button a {
+    color: black;
+}
+
+.index-button a:hover {
+    color: black;
+}
+
+.carousel-arrow {
+    background: white;
+    border: none;
+}
+
 /* About Page */
 .about-image-one {
     max-width: auto;
@@ -109,6 +126,7 @@ main {
     object-fit: cover;
     overflow: hidden;
 }
+
 
 .about-image-two {
     max-width: auto;
@@ -256,6 +274,10 @@ main {
     border: solid 1px black;
 }
 
+.carousel .slide {
+    background-color: white !important;
+}
+
 .carousel-status {
     display: none;
 }
@@ -279,3 +301,5 @@ main {
 .thumbs.animated {
     padding: 0px;
 }
+
+ 

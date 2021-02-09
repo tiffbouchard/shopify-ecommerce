@@ -1,4 +1,4 @@
-import { Modal, Button, Form, FormControl } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 
 import styles from './ModalSubscribe.module.css';
 
@@ -37,7 +37,7 @@ function ModalSubscribe(props) {
   return (
     <Modal
       {...props}
-      size="xl"
+      size="lg"
       aria-labelledby="contained-modal-title-vcenter"
       centered
       className={styles.wrapper}
