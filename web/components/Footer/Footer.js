@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import ModalSubscribe from "../ModalSubscribe/ModalSubscribe";
 
 const Footer = () => {
-  const [modalShow, setModalShow] = React.useState(false);
+  const [modalShow, setModalShow] = React.useState();
 
   React.useEffect(() => {
     if (sessionStorage.getItem("closeButtonClicked") === true) {
@@ -13,6 +13,7 @@ const Footer = () => {
       setModalShow(false);
     } else {
       setModalShow(true);
+      console.log(modalShow)
     }
   }, []);
 

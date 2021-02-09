@@ -65,7 +65,8 @@ const Home = (props) => {
             </div>
           </Col>
         </Row>
-        <Row>
+        <Row className="justify-content-center mt-5 mb-5">
+          <h2 className="mb-3">New Arrivals</h2>
           <ProductCarousel/>
         </Row>
         <Row>

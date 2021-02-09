@@ -5,6 +5,7 @@ import Layout from "../components/Layout";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 function MyApp({ Component, pageProps }) {
+
   return (
     <ShopProvider>
       <Layout>

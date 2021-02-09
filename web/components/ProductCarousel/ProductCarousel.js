@@ -24,7 +24,7 @@ const ProductCarousel = () => {
       </div>
     );
   else return (
-    <Carousel>
+    <Carousel show={3.5} slide={3} swiping={true}>
       {collection.products.map((product) => (
         <Product product={product}/>
       ))}

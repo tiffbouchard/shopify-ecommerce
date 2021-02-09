@@ -2,7 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/": "pages/index.js",
-  "/collections/new": "pages/collections/new.js",
-  "/products/[handle]": "pages/products/[handle].js"
+  "/collections/bags": "pages/collections/bags.js",
+  "/": "pages/index.js"
 }

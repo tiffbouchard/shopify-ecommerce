@@ -1,9 +1,9 @@
 import Head from "next/head";
 
-import { Container, Image, Row, Col, Spinner } from "react-bootstrap";
+import { Container, Row, Col, Spinner } from "react-bootstrap";
 
 import { ShopContext } from "../../context/shopContext";
-
+import Product from "../Product/Product"
 
 const Collection = () => {
   const { collection } = React.useContext(ShopContext);
@@ -36,28 +36,7 @@ const Collection = () => {
         <Row>
           {collection.products.map((product) => (
             <Col xs={12} sm={6} md={6} lg={4} key={product.id}>
-              <div className="product-section">
-                <a href={`/products/${product.handle}`}>
-                  <Image
-                    className="products"
-                    fluid
-                    src={product.images[0].src}
-                  />
-                </a>
-              </div>
-              <div className="product-description">
-                <a
-                  href={`/products/${product.handle}`}
-                  className="product-name"
-                >
-                  {product.title}
-                </a>
-                <a href="/products/:id" className="product-price">
-                  {product.availableForSale
-                    ? "$" + product.variants[0].price
-                    : "Sold out"}
-                </a>
-              </div>
+              <Product product={product}/>
             </Col>
           ))}
         </Row>

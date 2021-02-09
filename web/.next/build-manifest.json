@@ -29,15 +29,10 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/collections/new": [
+    "/collections/bags": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/collections/new.js"
-    ],
-    "/products/[handle]": [
-      "static/chunks/main.js",
-      "static/chunks/webpack.js",
-      "static/chunks/pages/products/[handle].js"
+      "static/chunks/pages/collections/bags.js"
     ]
   },
   "ampFirstPages": []
