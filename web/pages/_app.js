@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       </Layout>
     </ShopProvider>
-  );
+  ); 
 }
 
 export default MyApp;
