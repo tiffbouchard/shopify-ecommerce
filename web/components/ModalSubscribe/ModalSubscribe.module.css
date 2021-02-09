@@ -8,15 +8,26 @@
 .body {
     background-color: #c4dbc8;
     height: 170px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
 }
 
 .form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
     margin-top: 10px;
 }
@@ -28,7 +39,8 @@
     border-radius: 0px;
     width: 50%;
     margin-right: 10px;
-    box-shadow: 5px 5px black;
+    -webkit-box-shadow: 5px 5px black;
+            box-shadow: 5px 5px black;
     padding: 0px 15px;
 }
 
@@ -39,5 +51,6 @@
     border-radius: 0px;
     color: black;
     padding: 10px;
-    box-shadow: 5px 5px black;
+    -webkit-box-shadow: 5px 5px black;
+            box-shadow: 5px 5px black;
 }

@@ -59,7 +59,6 @@ const About = (props) => {
   );
 };
 
-// Fetching data from Sanity.io with GROQ query
 About.getInitialProps = async () => ({
   sections: await client.fetch(`
   *[_type == "about"]{description, image, title}

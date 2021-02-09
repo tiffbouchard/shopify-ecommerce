@@ -1,10 +1,9 @@
-import { Image, Spinner } from "react-bootstrap";
+import { Spinner } from "react-bootstrap";
 
 
 import { Carousel } from '@trendyol-js/react-carousel';
 import { ShopContext } from "../../context/shopContext";
 import Product from "../Product/Product";
-import styles from "./ProductCarousel.module.css";
 
 const ProductCarousel = () => {
   const { collection, fetchCollection } = React.useContext(ShopContext);

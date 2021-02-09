@@ -28,12 +28,13 @@ const Contact = () => {
       <form type="search" className="search-form" onSubmit={handleSubmit}>
         <input
           type="text"
+          name="search-input"
           placeholder="Search"
           className="search-form-input"
           value={query}
           onChange={handleChange}
         />
-        <button type="submit" className="search-form-input-button">
+        <button type="submit" name="search-submit" className="search-form-input-button">
           Go
         </button>
       </form>

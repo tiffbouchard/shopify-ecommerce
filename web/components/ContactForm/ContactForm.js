@@ -1,30 +1,51 @@
 import emailjs from "emailjs-com";
 
-const SERVICE_ID = process.env.SERVICE_ID;
-const TEMPLATE_ID = process.env.TEMPLATE_ID;
-const USER_ID = process.env.USER_ID;
+const TEMPLATE_ID = process.env.EMAILJS_TEMPLATE_ID;
+const USER_ID = process.env.EMAILJS_USER_ID;
+const SERVICE_ID = process.env.EMAILJS_SERVICE_ID;
 
 class Form extends React.Component {
   state = {
     name: "",
     email: "",
     message: "",
+    response: "",
+    loading: false
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
 
+    const { email, message } = this.state;
+
     let templateParams = {
-      from_name: this.state.email,
+      from_name: email,
       to_name: "OJOS",
-      message_html: this.state.message,
-      reply_to: this.state.email,
+      message_html: message,
+      reply_to: email,
     };
 
-    emailjs
-      .send("gmail", { TEMPLATE_ID }, templateParams, { USER_ID })
-      .then(this.resetForm());
+    this.sendEmail(templateParams);
   };
+
+  sendEmail = (templateParams) => {
+    this.setState({ loading : true });
+
+    emailjs.send(
+      SERVICE_ID, 
+      TEMPLATE_ID, 
+      templateParams,
+      USER_ID
+      )
+      .then((response) => {
+        this.setState({ loading : false });
+        this.setState({ response : "Yay! 🎉 Your message has been sent. We will get back to you ASAP" });
+        this.resetForm();
+      }, (error) => {
+        this.setState({ loading : false });
+        this.setState({ response : error.text });
+    });
+  }
 
   resetForm() {
     this.setState({
@@ -39,6 +60,8 @@ class Form extends React.Component {
   };
 
   render() {
+    const { response, loading, message, email , name } = this.state;
+
     return (
       <section className="sub-section" id="contact">
         <div>
@@ -46,7 +69,7 @@ class Form extends React.Component {
             <input
               type="text"
               name="name"
-              value={this.state.name}
+              value={name}
               onChange={this.handleChange}
               placeholder="Name"
               className="contact-form-input"
@@ -55,7 +78,7 @@ class Form extends React.Component {
               required
               type="email"
               name="email"
-              value={this.state.email}
+              value={email}
               onChange={this.handleChange}
               placeholder="Email"
               className="contact-form-input"
@@ -64,14 +87,15 @@ class Form extends React.Component {
               required
               rows="10"
               name="message"
-              value={this.state.message}
+              value={message}
               onChange={this.handleChange}
               placeholder="Message"
               className="contact-form-input"
             />
-            <button type="submit" className="contact-form-input-button">
-              Send
+            <button type="submit" className="contact-form-input-button" disabled={loading}>
+              {loading ? "Sending..." : "Send"}
             </button>
+            <div>{response ? response : " "}</div>
           </form>
         </div>
       </section>

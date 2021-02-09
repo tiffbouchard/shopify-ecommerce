@@ -104,7 +104,6 @@ const Home = (props) => {
   );
 };
 
-// Fetching data from Sanity.io with GROQ query
 Home.getInitialProps = async () => ({
   images: await client.fetch(`
   *[_type == "homepage"]{url, description, title, image}
