@@ -2,18 +2,17 @@ import { Navbar, Nav } from "react-bootstrap";
 
 import ModalSubscribe from "../ModalSubscribe/ModalSubscribe";
 
-const Footer = () => {
+export default function Footer() {
   const [modalShow, setModalShow] = React.useState();
 
   React.useEffect(() => {
-    if (sessionStorage.getItem("closeButtonClicked") === true) {
-      setModalShow(false);
-    }
-    if (localStorage.getItem("subscribed") === true) {
+    const closeClicked = sessionStorage.getItem("closeButtonClicked");
+    const subscribed = localStorage.getItem("subscribed");
+
+    if (closeClicked || subscribed) {
       setModalShow(false);
     } else {
-      setModalShow(true);
-      console.log(modalShow)
+      setModalShow(true)
     }
   }, []);
 
@@ -34,4 +33,3 @@ const Footer = () => {
   );
 };
 
-export default Footer;
