@@ -5,22 +5,17 @@
 - [Learning Outcomes](#learning-outcomes)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Design Process](#design-process)
+- [Design](#design)
 - [Preview](#preview)
 - [Getting Started](#getting-started)
 - [Next Steps](#next-steps)
 
 ## About 
-OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials. Supporting others creative visions and helping them make them reality is what being a developer is about to me and building things that help others make their ideas real. As one of the first real projects it could have not embodied my values and interests more especially as a lover of fashion and supporter of sustainability and a deep respect for small business owners with unique visions. 
-
-> OJOS is currently preparing for product drops and public release and all site content is currently placeholder 
+OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials.  
 
 ## Learning Outcomes
-During the process of designing and building this project, I learned a lot. Specifically...
-  - Collaborating on design process through wireframing with Figma
-  - Using React context hooks in order to share state among components rather than prop drilling
-  - Using Next.js for server side rendering and built in API routes 
-  - Understanding the purpose and use cases for headless CMS softwares 
+- React context hooks in order to share state among components rather than prop drilling
+- Using Next.js for server side rendering and built in API routes 
 
 ## Features
 - The owner is able to update content/products from Sanity and Shopify admin dashboard for easier management and giving more independence to the owner, also gives the ability to scale if need be 
@@ -37,11 +32,8 @@ During the process of designing and building this project, I learned a lot. Spec
 - Instagram API
 - Mailchimp & EmailJS
 
-## Design Process
-- The design process included ongoing collaboration with the owner, it began with looking at other ecommerce sites she liked based on design and functionality
-- Based on specifications and inspiration, I put together an initial wireframe on Figma, shared it with the owner and feedback through comments were taken into consideration in a second iteration
-- Finally I put together a minimal interative prototype to show the owner how the flow of the site would be
-- View Figma wireframes & prototypes [here](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
+## Design
+[Figma wireframes & prototypes](https://www.figma.com/file/Tcwbu0SNd8V8mFCPEImZLe/v1)
 
 ## Preview
 
@@ -55,7 +47,7 @@ During the process of designing and building this project, I learned a lot. Spec
 <img src="./web/public/gifs/search.gif" alt="search-gif"/>
 
 ## Getting Started 
-Click [here](https://ojos.vercel.app) for a demo - when OJOS goes live you can find it [here]()
+Click [here](https://ojos.vercel.app) for a demo
 
 ## Next Steps
 - Connect Sanity and Shopify to sync product data with webhooks in order to provide seamless management of products for client (not sure how to do this, but will find out)
