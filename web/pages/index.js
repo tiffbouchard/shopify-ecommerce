@@ -1,11 +1,9 @@
 import Head from "next/head";
 
-// Bootstrap
 import { Row, Col, Container, Image } from "react-bootstrap";
 
 import Instagram from "../components/Instagram/Instagram";
 import ProductCarousel from "../components/ProductCarousel/ProductCarousel"
-// Sanity.io
 import client from "../client";
 import urlFor from "../imageUrlBuilder";
 

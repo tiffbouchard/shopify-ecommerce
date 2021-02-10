@@ -19,12 +19,14 @@ function ModalSubscribe(props) {
       },
       method: "POST",
     });
+
     const { error } = await res.json();
 
     if (error) {
       setMessage(error);
       return;
     }
+    
     localStorage.setItem("subscribed", true);
     input.current.value = "";
     setMessage("Success! 🎉 You are now subscribed to the newsletter.");

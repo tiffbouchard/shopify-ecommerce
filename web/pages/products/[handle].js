@@ -1,19 +1,17 @@
 import Head from "next/head";
-import { ShopContext } from "../../context/shopContext";
-
-import Instagram from "../../components/Instagram/Instagram";
 
 import { Carousel } from "react-responsive-carousel";
+import { Spinner, Toast } from "react-bootstrap";
 
-// Bootstrap
-import { Image, Spinner, Toast } from "react-bootstrap";
+import { ShopContext } from "../../context/shopContext";
+import Instagram from "../../components/Instagram/Instagram";
 
 const ProductDetails = (props) => {
   const [show, setShow] = React.useState(false);
 
   let handle = props.params.handle;
+
   const {
-    checkout,
     fetchProductByHandle,
     addItemToCheckout,
     product,

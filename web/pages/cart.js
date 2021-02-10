@@ -1,9 +1,10 @@
 import Head from "next/head";
+
+import { Spinner } from "react-bootstrap";
+
 import MobileCart from "../components/Cart/MobileCart";
 import DesktopCart from "../components/Cart/DesktopCart";
 import { ShopContext } from "../context/shopContext";
-
-import { Spinner } from "react-bootstrap";
 
 const Cart = (props) => {
   const { checkout } = React.useContext(ShopContext);

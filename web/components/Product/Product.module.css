@@ -47,6 +47,7 @@
     margin-top: 10px;
     margin-bottom: 15px;
 }
+
 .name, .price, .name:hover, .price:hover {
     font-size: 15px;
     margin: 0px;

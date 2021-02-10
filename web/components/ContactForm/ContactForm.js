@@ -41,10 +41,10 @@ class Form extends React.Component {
         this.setState({ loading : false });
         this.setState({ response : "Yay! 🎉 Your message has been sent. We will get back to you ASAP" });
         this.resetForm();
-      }, (error) => {
+      }).catch((error) => {
         this.setState({ loading : false });
-        this.setState({ response : error.text });
-    });
+        this.setState({ response : "Something went wrong, sorry! Please try again later" })
+      });
   }
 
   resetForm() {

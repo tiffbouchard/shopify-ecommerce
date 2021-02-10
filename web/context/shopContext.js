@@ -22,20 +22,17 @@ class ShopProvider extends React.Component {
     } else {
       this.createCheckout();
     }
-    if (localStorage.checkoutTotal) {
-      const checkoutTotal = localStorage.getItem("checkoutTotal");
-      this.setState({ checkoutTotal: checkoutTotal });
-    }
   }
   
   fetchCheckout = async (checkoutId) => {
-    client.checkout
-      .fetch(checkoutId)
-      .then((checkout) => {
-        this.setState({ checkout: checkout });
-      })
-      .catch((err) => console.log(err));
+    try {
+      const checkout = await client.checkout.fetch(checkoutId);
+      this.setState({ checkout: checkout});
+    } catch (error) {
+      console.log(error);
+    }
   };
+
 
   createCheckout = async () => {
     const checkout = await client.checkout.create();
@@ -56,23 +53,15 @@ class ShopProvider extends React.Component {
       lineItemsToAdd
     );
     this.setState({ checkout: checkout });
-    const checkoutTotal = parseInt(this.state.checkoutTotal, 10) + 1;
-    this.setState({ checkoutTotal: checkoutTotal });
-    localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
   };
 
   removeItemFromCheckout = async (checkoutId, lineItemsIds) => {
-    const checkoutIdToModify = await checkoutId; // ID of an existing checkout
+    const checkoutIdToModify = await checkoutId; 
     const lineItemsIdToRemove = await lineItemsIds;
-    // Remove an item from the checkout
     client.checkout
       .removeLineItems(checkoutIdToModify, lineItemsIdToRemove)
       .then((checkout) => {
-        // Do something with the updated checkout
         this.setState({ checkout: checkout });
-        const checkoutTotal = parseInt(this.state.checkoutTotal, 10) - 1;
-        this.setState({ checkoutTotal: checkoutTotal });
-        localStorage.setItem("checkoutTotal", this.state.checkoutTotal);
       });
   };
 
@@ -97,7 +86,7 @@ class ShopProvider extends React.Component {
 
   fetchBySearch = async (query) => {
     const products = await client.product.fetchAll();
-    console.log(products);
+
     const searchResults = products.filter((product) => {
       const productTitle = product.title.toUpperCase();
       const productType = product.productType.toUpperCase();
@@ -107,7 +96,6 @@ class ShopProvider extends React.Component {
       );
     });
     this.setState({ searchResults: searchResults });
-    console.log(searchResults);
   };
 
   render() {

@@ -1,7 +1,6 @@
 import { Spinner } from "react-bootstrap";
-
-
 import { Carousel } from '@trendyol-js/react-carousel';
+
 import { ShopContext } from "../../context/shopContext";
 import Product from "../Product/Product";
 

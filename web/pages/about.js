@@ -1,9 +1,9 @@
 import Head from "next/head";
 
+import { Row, Col, Container, Image } from "react-bootstrap";
+
 import client from "../client";
 import urlFor from "../imageUrlBuilder";
-
-import { Row, Col, Container, Image } from "react-bootstrap";
 
 const About = (props) => {
   const { sections = [] } = props;

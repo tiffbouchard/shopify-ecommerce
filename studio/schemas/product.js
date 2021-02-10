@@ -46,11 +46,6 @@ export default {
         hotspot: true,
       },
     },
-    // {
-    //   title: 'Default variant',
-    //   name: 'defaultProductVariant',
-    //   type: 'productVariant'
-    // },
     {
       title: "Variants",
       name: "variants",
@@ -62,24 +57,6 @@ export default {
         },
       ],
     },
-    // {
-    //   title: 'Tags',
-    //   name: 'tags',
-    //   type: 'array',
-    //   of: [
-    //     {
-    //       type: 'string'
-    //     }
-    //   ],
-    //   options: {
-    //     layout: 'tags'
-    //   }
-    // },
-    // {
-    //   name: 'blurb',
-    //   title: 'Blurb',
-    //   type: 'localeString'
-    // },
     {
       name: "category",
       title: "Category",

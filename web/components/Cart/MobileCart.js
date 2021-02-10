@@ -1,6 +1,6 @@
-import { ShopContext } from "../../context/shopContext";
-
 import Table from "react-bootstrap/Table";
+
+import { ShopContext } from "../../context/shopContext";
 import styles from "./Cart.module.css";
 
 const MobileCart = (props) => {

@@ -1,13 +1,12 @@
 import Head from "next/head";
 
-import { ShopContext } from "../../context/shopContext";
-
-//Bootstrap
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Spinner from "react-bootstrap/Spinner";
+
+import { ShopContext } from "../../context/shopContext";
 
 const AllProducts = (props) => {
   const { fetchAllProducts, products } = React.useContext(ShopContext);

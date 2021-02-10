@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import ContactForm from "../components/ContactForm/ContactForm";
 
 const Contact = () => {
