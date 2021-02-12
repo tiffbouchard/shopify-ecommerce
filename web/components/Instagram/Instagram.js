@@ -8,7 +8,7 @@ function Instagram() {
   const [images, setImages] = React.useState([]);
 
   React.useEffect(() => {
-    fetch("https://www.instagram.com/tiffbouchard/?__a=1")
+    fetch("https://www.instagram.com/ssense/?__a=1")
       .then((res) => res.json())
       .then(
         (result) => {

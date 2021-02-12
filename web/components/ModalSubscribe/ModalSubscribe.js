@@ -58,7 +58,7 @@ function ModalSubscribe(props) {
             : `Join the list for exclusive details on products and releases`}
         </h4>
 
-        <form className={styles.form} onSubmit={subscribe} inline>
+        <form className={styles.form} onSubmit={subscribe}>
           <input
             type="email"
             placeholder="Email"

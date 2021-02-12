@@ -43,6 +43,7 @@ class Form extends React.Component {
         this.resetForm();
       }).catch((error) => {
         this.setState({ loading : false });
+        console.log(error)
         this.setState({ response : "Something went wrong, sorry! Please try again later" })
       });
   }
