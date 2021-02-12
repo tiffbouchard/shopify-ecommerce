@@ -1,0 +1,33 @@
+{
+  "name": "ojos",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.21",
+    "@sanity/client": "^1.150.1",
+    "@sanity/image-url": "^0.140.19",
+    "@trendyol-js/react-carousel": "^1.0.5",
+    "bootstrap": "^4.5.2",
+    "dotenv": "^8.2.0",
+    "emailjs-com": "^2.6.3",
+    "groq": "^1.150.1",
+    "next": "^9.5.2",
+    "next-google-fonts": "^1.2.1",
+    "react": "^16.14.0",
+    "react-bootstrap": "^1.3.0",
+    "react-dom": "^16.14.0",
+    "react-image-gallery": "^1.0.8",
+    "react-responsive-carousel": "^3.2.10",
+    "shopify-buy": "^2.11.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "babel-loader": "^8.1.0",
+    "react-is": "^16.13.1"
+  }
+}
