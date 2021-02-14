@@ -8,7 +8,6 @@ import { ShopContext } from "../context/shopContext";
 
 const Cart = (props) => {
   const { checkout } = React.useContext(ShopContext);
-  console.log(checkout)
 
   if (!checkout.lineItems)
     return (
