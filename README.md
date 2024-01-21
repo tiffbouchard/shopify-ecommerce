@@ -10,7 +10,7 @@
 - [Next Steps](#next-steps)
 
 ## About 
-OJOS is an eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials. (Not in use, using as a personal test project)
+An eCommerce project created for a small Toronto-based business that sells handmade one of a kind pieces made from deadstock materials. (Not in use, using as a personal test project)
 
 ## Learning Outcomes
 - React context hooks in order to share state among components rather than prop drilling
